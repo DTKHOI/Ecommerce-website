@@ -159,11 +159,16 @@ textarea {
 
 button {
   cursor: pointer;
+  color: var(--text-color);
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: var(--text-color);
+}
+
+.icon {
+  filter: var(--icon-color);
 }
 
 .row > *, .container-fluid, .container {
@@ -1197,14 +1202,34 @@ a {
     --grid-gutter-y: 90px;
   }
 }
-.header {
-  padding: 30px;
-  background: #eee;
+html.dark {
+  --text-color: #fff;
+  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
+      saturate(0%) hue-rotate(331deg) brightness(103%) contrast(101%);
+  --header-bg-color: #171c28;
+  --top-act-group-bg-color: #292e39;
+  --top-act-group-shadow: 0 20px 60px 10px rgba(0, 0, 0, 0.2);
+  --top-act-group-separate-bg: #ededf6;
 }
 
-.top-bar {
+html {
+  --text-color: #1a162e;
+  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(8%)
+      saturate(5166%) hue-rotate(212deg) brightness(93%) contrast(96%);
+  --header-bg-color: #eee;
+  --top-act-group-bg-color: white;
+  --top-act-group-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.2);
+  --top-act-group-separate-bg: #ededf6;
+}
+
+.top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
   display: flex;
   align-items: center;
+}
+
+.header {
+  padding: 30px;
+  background: var(--header-bg-color);
 }
 
 .navbar {
@@ -1212,16 +1237,12 @@ a {
   margin-right: auto;
 }
 .navbar__list {
-  display: flex;
-  align-items: center;
   gap: 30px;
 }
 .navbar__link {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.47;
-  display: flex;
-  align-items: center;
   gap: 6px;
 }
 .navbar__arrow {
@@ -1229,16 +1250,12 @@ a {
 }
 
 .top-act {
-  display: flex;
-  align-items: center;
   gap: 20px;
 }
 .top-act__group {
-  display: flex;
-  align-items: center;
-  background: white;
+  background: var(--top-act-group-bg-color);
   border-radius: 8px;
-  box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.2);
+  box-shadow: var(--top-act-group-shadow);
   min-width: 50px;
   height: 50px;
 }
@@ -1247,8 +1264,6 @@ a {
 }
 .top-act__btn {
   padding: 10px 20px;
-  display: flex;
-  align-items: center;
   gap: 10px;
 }
 .top-act__title {
@@ -1259,13 +1274,14 @@ a {
 .top-act__separate {
   width: 1px;
   height: 30px;
-  background: #ededf6;
+  background: var(--top-act-group-separate-bg);
 }
 .top-act__avatar {
   width: 50px;
   border-radius: 8px;
   box-shadow: 0 4px 14px 2px rgba(0, 0, 0, 0.08);
   object-fit: cover;
+  cursor: pointer;
 }
 
 .logo {
@@ -1274,7 +1290,7 @@ a {
   gap: 14px;
 }
 .logo__title {
-  color: #1a162e;
+  color: var(--text-color);
   font-size: 2.2rem;
   font-weight: 700;
   line-height: 1.45;
