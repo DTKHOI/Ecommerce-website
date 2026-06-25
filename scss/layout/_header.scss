@@ -1,0 +1,84 @@
+@use "../abstracts/variables" as var;
+
+.header {
+    padding: 30px;
+    background: var.$background-color;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    margin-left: 144px;
+    margin-right: auto;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__link {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.47;
+
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    &__arrow {
+        margin-top: 3px;
+    }
+}
+
+.top-act {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &__group {
+        display: flex;
+        align-items: center;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.2);
+
+        min-width: 50px;
+        height: 50px;
+
+        &:first-child > button {
+            padding: 13px;
+        }
+    }
+
+    &__btn {
+        padding: 10px 20px;
+
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.47;
+    }
+
+    &__separate {
+        width: 1px;
+        height: 30px;
+        background: var.$secondary-color-4;
+    }
+
+    &__avatar {
+        width: 50px;
+        border-radius: 8px;
+        box-shadow: 0 4px 14px 2px rgba(0, 0, 0, 0.08);
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,14 @@
+@use "../abstracts/variables" as var;
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    &__title {
+        color: var.$secondary-color-1;
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.45;
+    }
+}
