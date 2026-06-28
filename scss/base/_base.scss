@@ -14,13 +14,17 @@ body {
     background: var(--body-bg);
 }
 
+a,
 input,
+img,
 button,
-textarea {
+textarea,
+select {
     font-family: inherit;
     outline: none;
     border: none;
     background: transparent;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button {
