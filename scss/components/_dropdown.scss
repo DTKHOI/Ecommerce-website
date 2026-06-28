@@ -8,7 +8,6 @@
     width: min(1240px, 100%);
 
     @include abstracts.breakpoints(lg) {
-        display: block;
         position: initial;
         padding-top: 0;
     }
@@ -184,5 +183,9 @@
         grid-template-columns: repeat(4, 1fr);
         height: var(--max-inner-hegiht);
         padding-left: 0;
+
+        @include abstracts.breakpoints(lg) {
+            grid-template-columns: 1fr;
+        }
     }
 }
