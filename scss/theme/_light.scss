@@ -7,9 +7,21 @@ html {
 
     --body-bg: #f6f6f6;
     --header-bg-color: #eee;
+    --header-shadow: rgba(237, 237, 246, 0.2);
     --top-act-group-bg-color: white;
     --top-act-group-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.2);
     --top-act-group-separate-bg: #ededf6;
+
+    //drowdown
+    --dropdown-bg: white;
+    --dropdown-shadow: 0 40px 90px 20px rgba(200, 200, 200, 0.4);
+    --dropdown__link-color: #1a162e;
+    --dropdown__arrow-color: brightness(0) saturate(100%) invert(100%)
+        sepia(100%) saturate(24%) hue-rotate(35deg) brightness(104%)
+        contrast(109%);
+    --top-menu-border-color: #d2d1d6;
+    --menu-column-icon-color: brightness(0) saturate(100%) invert(9%) sepia(29%)
+        saturate(1251%) hue-rotate(210deg) brightness(91%) contrast(97%);
 
     @include abstracts.breakpoints(lg) {
         --header-bg-color: white;

@@ -5,7 +5,19 @@ html.dark {
 
     --body-bg: #292e39;
     --header-bg-color: #171c28;
+    --header-shadow: rgba(0, 0, 0, 0.2);
     --top-act-group-bg-color: #292e39;
     --top-act-group-shadow: 0 20px 60px 10px rgba(0, 0, 0, 0.2);
     --top-act-group-separate-bg: #ededf6;
+
+    //dropdown
+    --dropdown-bg: #292e39;
+    --dropdown-shadow: 0 40px 90px 20px rgba(23, 28, 40, 0.4);
+    --dropdown__link-color: #b9babe;
+    --dropdown__arrow-color: brightness(0) saturate(100%) invert(16%) sepia(36%)
+        saturate(309%) hue-rotate(182deg) brightness(92%) contrast(93%);
+    --top-menu-border-color: #171c28;
+    --menu-column-icon-color: brightness(0) saturate(100%) invert(94%)
+        sepia(85%) saturate(232%) hue-rotate(234deg) brightness(107%)
+        contrast(96%);
 }
