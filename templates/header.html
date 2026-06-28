@@ -14,8 +14,20 @@
         <!-- Navbar -->
         <nav id="navbar" class="navbar show">
             <button class="navbar__close-btn js-toggle" toggle-target="#navbar">
-                <img src="./assets/icon/arrow-left.svg" alt="Back" />
+                <img class="icon" src="./assets/icon/arrow-left.svg" alt="Back" />
             </button>
+
+            <a href="#!" class="nav-btn d-none d-md-flex">
+                <img src="./assets/icon/cart.svg" alt="" class="icon nav-btn__icon" />
+                <span class="nav-btn__title">Cart</span>
+                <span class="nav-btn__quantity">3</span>
+            </a>
+
+            <a href="#!" class="nav-btn d-none d-md-flex">
+                <img src="./assets/icon/love.svg" alt="" class="icon nav-btn__icon" />
+                <span class="nav-btn__title">Favorite</span>
+                <span class="nav-btn__quantity">3</span>
+            </a>
 
             <ul class="navbar__list js-dropdown-list">
                 <li class="navbar__item">

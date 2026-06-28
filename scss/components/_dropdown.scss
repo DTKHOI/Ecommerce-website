@@ -2,10 +2,11 @@
 
 .dropdown {
     position: absolute;
-    left: 0px;
+    left: 0;
+
+    width: min(1240px, 100%);
     padding-top: 54px;
     display: none;
-    width: min(1240px, 100%);
 
     @include abstracts.breakpoints(lg) {
         position: initial;
@@ -14,31 +15,30 @@
 
     &__inner {
         --inner-padding: 30px;
+
         position: relative;
 
-        max-height: var(--inner-max-height);
         padding: var(--inner-padding);
 
         border-radius: 20px;
-        background: var(--dropdown-bg);
-        box-shadow: var(--dropdown-shadow);
-        color: var(--dropdown__link-color);
+        background: var(--dropdown-bg-color);
+        box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
 
         &::before {
-            content: url("../icon/dropdown-arrow.svg");
+            content: url("../icons/dropdown-arrow.svg");
             position: absolute;
             top: -13px;
             left: var(--arrow-left-pos);
             translate: -50%;
-            filter: var(--dropdown__arrow-color);
+            filter: var(--dropdown-arrow-color);
         }
 
         @include abstracts.breakpoints(lg) {
-            border-radius: initial;
+            padding: 0 40px;
+
+            border-radius: 0;
             background: transparent;
             box-shadow: none;
-
-            padding: 0 40px;
 
             &::before {
                 content: none;
@@ -49,14 +49,14 @@
 
 .top-menu {
     --main-column-width: 292px;
-    --max-inner-hegiht: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+    --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
 
     position: relative;
 
     &__main {
         width: var(--main-column-width);
-        height: var(--max-inner-hegiht);
-        border-right: 1.5px solid var(--top-menu-border-color);
+        height: var(--max-inner-height);
+        border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
 
         @include abstracts.breakpoints(lg) {
@@ -71,16 +71,20 @@
     display: flex;
     gap: 14px;
 
+    + .menu-column {
+        margin-top: 22px;
+    }
+
     @include abstracts.breakpoints(lg) {
         margin-top: 10px;
     }
 
     &__icon {
-        flex-shrink: 0;
+        position: relative;
 
+        flex-shrink: 0;
         width: 36px;
         height: 36px;
-        position: relative;
 
         @include abstracts.breakpoints(xl) {
             display: none;
@@ -89,34 +93,34 @@
         @include abstracts.breakpoints(lg) {
             display: block;
         }
-
-        &-1 {
-            width: 30px;
-            height: 30px;
-            object-fit: contain;
-        }
-
-        &-2 {
-            width: 24px;
-            height: 24px;
-            object-fit: contain;
-
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            filter: var(--menu-column-icon-color);
-        }
     }
 
     &__content {
         flex: 1;
     }
 
+    &__icon-1 {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+    }
+
+    &__icon-2 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        filter: var(--menu-column-icon-color);
+    }
+
     &__heading {
-        margin-top: 5px;
+        margin-top: 4px;
         font-size: 1.6rem;
         font-weight: 500;
-        line-height: 1.5;
+        line-height: 150%;
 
         @include abstracts.breakpoints(lg) {
             margin-bottom: 26px;
@@ -147,8 +151,7 @@
         display: block;
         padding: 7px 0;
         font-size: 1.4rem;
-        font-weight: 400;
-        line-height: 1.43;
+        line-height: 142.857%;
     }
 }
 
@@ -170,22 +173,17 @@
         padding-left: 0;
     }
 
-    &__column {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-
     &--not-main {
-        display: grid;
         position: initial;
         inset: initial;
+        display: grid;
         grid-template-columns: repeat(4, 1fr);
-        height: var(--max-inner-hegiht);
+        height: var(--max-inner-height);
         padding-left: 0;
 
         @include abstracts.breakpoints(lg) {
             grid-template-columns: 1fr;
+            height: auto;
         }
     }
 }
