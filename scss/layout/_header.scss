@@ -26,14 +26,6 @@
     @include abstracts.breakpoints(lg) {
         padding: 20px 0;
     }
-
-    &__more {
-        display: none;
-
-        @include abstracts.breakpoints(lg) {
-            display: block;
-        }
-    }
 }
 
 .navbar {
@@ -152,10 +144,6 @@
 
         &:first-child > button {
             padding: 13px;
-        }
-
-        @include abstracts.breakpoints(md) {
-            display: none;
         }
 
         &--single {
