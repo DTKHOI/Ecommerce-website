@@ -22,7 +22,7 @@ html {
     --menu-column-icon-color: brightness(0) saturate(100%) invert(9%) sepia(29%) saturate(1251%) hue-rotate(210deg)
         brightness(91%) contrast(97%);
 
-    @include abstracts.breakpoints(lg) {
+    @include abstracts.screen(lg) {
         --header-bg-color: white;
     }
 

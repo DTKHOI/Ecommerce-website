@@ -4,7 +4,7 @@
     margin: 40px 0;
     position: relative;
 
-    @include abstracts.breakpoints(md) {
+    @include abstracts.screen(md) {
         margin-top: 30px;
     }
 
@@ -19,7 +19,7 @@
         width: 100%;
         padding-top: 34%;
 
-        @include abstracts.breakpoints(md) {
+        @include abstracts.screen(md) {
             padding-top: 50%;
         }
     }
@@ -44,7 +44,7 @@
         align-items: center;
         display: flex;
 
-        @include abstracts.breakpoints(md) {
+        @include abstracts.screen(md) {
             width: 39%;
         }
     }
@@ -55,7 +55,7 @@
         font-weight: 500;
         line-height: 1.44;
 
-        @include abstracts.breakpoints(md) {
+        @include abstracts.screen(md) {
             font-size: 1.4rem;
             line-height: 1.43;
         }
@@ -78,7 +78,7 @@
             border: 4px white solid;
             border-radius: 50%;
 
-            @include abstracts.breakpoints(md) {
+            @include abstracts.screen(md) {
                 border-width: 3px;
             }
         }
