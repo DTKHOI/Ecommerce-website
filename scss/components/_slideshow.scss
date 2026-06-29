@@ -1,6 +1,12 @@
+@use "../abstracts";
+
 .slideshow {
     margin: 40px 0;
     position: relative;
+
+    @include abstracts.breakpoints(md) {
+        margin-top: 30px;
+    }
 
     &__inner {
         display: flex;
@@ -8,22 +14,39 @@
     }
 
     &__item {
+        position: relative;
         flex-shrink: 0;
         width: 100%;
+        padding-top: 34%;
+
+        @include abstracts.breakpoints(md) {
+            padding-top: 50%;
+        }
     }
 
     &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        border-radius: 20px;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     &__page {
         position: absolute;
-        bottom: 70px;
-        left: 70px;
+        bottom: 15%;
+        left: 5.2%;
         column-gap: 24px;
-
+        width: 17.5%;
         align-items: center;
         display: flex;
+
+        @include abstracts.breakpoints(md) {
+            width: 39%;
+        }
     }
 
     &__num {
@@ -31,11 +54,16 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 1.44;
+
+        @include abstracts.breakpoints(md) {
+            font-size: 1.4rem;
+            line-height: 1.43;
+        }
     }
 
     &__slider {
         position: relative;
-        width: 172px;
+        width: 100%;
         height: 4px;
         background: #fff;
 
@@ -49,6 +77,10 @@
             height: 14px;
             border: 4px white solid;
             border-radius: 50%;
+
+            @include abstracts.breakpoints(md) {
+                border-width: 3px;
+            }
         }
 
         &::before {

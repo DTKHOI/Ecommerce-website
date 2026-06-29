@@ -1303,8 +1303,8 @@ html.dark {
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow: 0 20px 60px 10px rgba(0, 0, 0, 0.2);
   --top-act-group-separate-bg: #ededf6;
-  --dropdown-bg: #292e39;
-  --dropdown-shadow: 0 40px 90px 20px rgba(23, 28, 40, 0.4);
+  --dropdown-bg-color: #292e39;
+  --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
   --dropdown__link-color: #b9babe;
   --dropdown__arrow-color: brightness(0) saturate(100%) invert(16%) sepia(36%) saturate(309%) hue-rotate(182deg)
       brightness(92%) contrast(93%);
@@ -1325,8 +1325,8 @@ html {
   --top-act-group-bg-color: white;
   --top-act-group-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.2);
   --top-act-group-separate-bg: #ededf6;
-  --dropdown-bg: white;
-  --dropdown-shadow: 0 40px 90px 20px rgba(200, 200, 200, 0.4);
+  --dropdown-bg-color: white;
+  --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
   --dropdown__link-color: #1a162e;
   --dropdown__arrow-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(24%) hue-rotate(35deg)
       brightness(104%) contrast(109%);
@@ -1360,6 +1360,7 @@ html {
 
 .top-bar {
   position: relative;
+  z-index: 1;
   padding: 30px 0;
 }
 @media (max-width: 991.98px) {
@@ -1784,24 +1785,48 @@ html {
   margin: 40px 0;
   position: relative;
 }
+@media (max-width: 767.98px) {
+  .slideshow {
+    margin-top: 30px;
+  }
+}
 .slideshow__inner {
   display: flex;
   overflow: hidden;
 }
 .slideshow__item {
+  position: relative;
   flex-shrink: 0;
   width: 100%;
+  padding-top: 34%;
+}
+@media (max-width: 767.98px) {
+  .slideshow__item {
+    padding-top: 50%;
+  }
 }
 .slideshow__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .slideshow__page {
   position: absolute;
-  bottom: 70px;
-  left: 70px;
+  bottom: 15%;
+  left: 5.2%;
   column-gap: 24px;
+  width: 17.5%;
   align-items: center;
   display: flex;
+}
+@media (max-width: 767.98px) {
+  .slideshow__page {
+    width: 39%;
+  }
 }
 .slideshow__num {
   color: white;
@@ -1809,9 +1834,15 @@ html {
   font-weight: 500;
   line-height: 1.44;
 }
+@media (max-width: 767.98px) {
+  .slideshow__num {
+    font-size: 1.4rem;
+    line-height: 1.43;
+  }
+}
 .slideshow__slider {
   position: relative;
-  width: 172px;
+  width: 100%;
   height: 4px;
   background: #fff;
 }
@@ -1823,6 +1854,11 @@ html {
   height: 14px;
   border: 4px white solid;
   border-radius: 50%;
+}
+@media (max-width: 767.98px) {
+  .slideshow__slider::before, .slideshow__slider::after {
+    border-width: 3px;
+  }
 }
 .slideshow__slider::before {
   left: 0;
