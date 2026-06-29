@@ -1780,4 +1780,57 @@ html {
   }
 }
 
+.slideshow {
+  margin: 40px 0;
+  position: relative;
+}
+.slideshow__inner {
+  display: flex;
+  overflow: hidden;
+}
+.slideshow__item {
+  flex-shrink: 0;
+  width: 100%;
+}
+.slideshow__img {
+  width: 100%;
+}
+.slideshow__page {
+  position: absolute;
+  bottom: 70px;
+  left: 70px;
+  column-gap: 24px;
+  align-items: center;
+  display: flex;
+}
+.slideshow__num {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44;
+}
+.slideshow__slider {
+  position: relative;
+  width: 172px;
+  height: 4px;
+  background: #fff;
+}
+.slideshow__slider::before, .slideshow__slider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border: 4px white solid;
+  border-radius: 50%;
+}
+.slideshow__slider::before {
+  left: 0;
+  translate: -90% -50%;
+}
+.slideshow__slider::after {
+  right: 0;
+  translate: 90% -50%;
+}
+
 /*# sourceMappingURL=main.css.map */
