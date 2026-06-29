@@ -102,6 +102,7 @@
             overflow-y: auto;
             overscroll-behavior: contain;
             height: calc(100% - 40px);
+            overscroll-behavior: contain;
         }
 
         @include abstracts.breakpoints(md) {
@@ -244,7 +245,7 @@
         line-height: 146.667%;
     }
 
-    &__qnt {
+    &__quantity {
         @extend .nav-btn__title;
         margin-left: auto;
     }
