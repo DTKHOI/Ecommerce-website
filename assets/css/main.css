@@ -159,6 +159,7 @@ select {
   outline: none;
   border: none;
   background: transparent;
+  padding: 0;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -2131,23 +2132,44 @@ html {
 .filter__form-slider::after {
   left: var(--max-value);
 }
-.filter__form-input, .filter__form-select-wrap {
+.filter__form-text-input, .filter__form-select-wrap {
   border-radius: 6px;
   border: 1px solid #d2d1d6;
 }
-.filter__form-input {
+.filter__form-text-input {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 334px;
+  height: 44px;
+  padding: 0 16px;
+}
+.filter__form-text-input--smaill {
   width: 121px;
   height: 36px;
   padding: 0 12px;
+}
+.filter__form-text-input--smaill .filter__form-input {
   font-size: 1.4rem;
-  line-height: 1.43;
-  font-weight: 500;
+}
+.filter__form-input {
+  width: 100%;
   color: var(--filter-form-label-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.47;
+}
+.filter__form-input::placeholder {
+  color: #9e9da8;
+  font-weight: 400;
 }
 .filter__form-select-wrap {
   height: 45px;
   display: flex;
   align-items: center;
+}
+.filter__form-input-icon {
+  padding-left: 12px;
 }
 .filter__form-select {
   color: var(--filter-form-label-color);
