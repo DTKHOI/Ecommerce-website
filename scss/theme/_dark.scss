@@ -44,4 +44,6 @@ html.dark {
     --filter-form-heading-color: white;
     --filter-form-label-color: white;
     --filter-form-tag-bg: #171c28;
+    --filter-form-arrow: brightness(0) saturate(100%) invert(16%) sepia(36%) saturate(309%) hue-rotate(182deg)
+        brightness(92%) contrast(93%);
 }
