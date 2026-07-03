@@ -1,0 +1,122 @@
+@use "../abstracts";
+
+.footer {
+    margin-top: 60px;
+
+    &__inner {
+        background: var(--header-bg-color);
+        padding: 64px 0;
+    }
+
+    &__separate {
+        margin-top: 32px;
+        width: 100%;
+        height: 1.5px;
+
+        background: var(--footer-separate-bg);
+    }
+
+    &__cta {
+        color: var(--text-color);
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.42;
+    }
+
+    &__desc {
+        color: var(--text-color);
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.5;
+
+        margin-top: 8px;
+    }
+
+    &__content {
+        margin: 64px 0;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1.6fr 1.2fr 1fr 0.6fr;
+        column-gap: 50.1px;
+    }
+
+    &__contact {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &-info {
+            margin-top: 3px;
+            color: var(--text-color);
+            font-weight: 400;
+            font-size: 1.5rem;
+            line-height: 142.857%;
+        }
+    }
+
+    &__label {
+        color: var(--text-color);
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 142.857%;
+    }
+
+    &__socials {
+        margin-top: 20px;
+        display: flex;
+        gap: 16px;
+    }
+
+    &__social {
+        width: 30px;
+
+        &:hover {
+            background: #ddd;
+            border-radius: 5px;
+        }
+    }
+
+    &__heading {
+        color: var(--text-color);
+        font-size: 1.8rem;
+        font-weight: 550;
+        line-height: 146.667%;
+
+        &--gap {
+            margin-top: 16px;
+        }
+    }
+
+    &__list {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: auto;
+        gap: 18px;
+    }
+
+    &__link {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 142.857%;
+
+        &:hover {
+            color: #0071dc;
+        }
+    }
+
+    &__copyright {
+        margin-top: 24px;
+
+        display: flex;
+        justify-content: center;
+
+        color: var(--text-color);
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 142.857%;
+    }
+}

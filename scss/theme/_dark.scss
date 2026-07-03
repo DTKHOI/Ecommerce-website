@@ -46,4 +46,9 @@ html.dark {
     --filter-form-tag-bg: #171c28;
     --filter-form-arrow: brightness(0) saturate(100%) invert(16%) sepia(36%) saturate(309%) hue-rotate(182deg)
         brightness(92%) contrast(93%);
+
+    // Contact form
+    --contact-form-input-border-color: #b9babe;
+    --contact-form-placeholder-color: #b9babe;
+    --footer-separate-bg: #eeeeee;
 }

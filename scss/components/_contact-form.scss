@@ -1,0 +1,28 @@
+@use "../abstracts";
+
+.contact-form {
+    display: flex;
+    margin-left: auto;
+    justify-content: flex-end;
+    gap: 12px;
+
+    &__input {
+        color: var(--filter-form-label-color);
+        width: 320px;
+        border-radius: 10px;
+        border: 1px solid var(--contact-form-input-border-color);
+        height: 45px;
+        padding: 0 12px;
+
+        &:placeholder-shown {
+            color: var(--contact-form-placeholder-color);
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.43;
+        }
+    }
+
+    &__btn {
+        height: 44px;
+    }
+}
