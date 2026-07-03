@@ -3,17 +3,36 @@
 .footer {
     margin-top: 60px;
 
+    @include abstracts.screen(lg) {
+        margin-top: 45px;
+    }
+
     &__inner {
         background: var(--header-bg-color);
         padding: 64px 0;
+
+        @include abstracts.screen(lg) {
+            padding: 32px 0;
+        }
+    }
+
+    &__top {
+        align-items: center;
     }
 
     &__separate {
-        margin-top: 32px;
         width: 100%;
         height: 1.5px;
 
         background: var(--footer-separate-bg);
+
+        &--top {
+            margin-top: 32px;
+
+            @include abstracts.screen(lg) {
+                margin-top: 24px;
+            }
+        }
     }
 
     &__cta {
@@ -21,6 +40,11 @@
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 1.42;
+
+        @include abstracts.screen(lg) {
+            text-align: center;
+            font-size: 1.8rem;
+        }
     }
 
     &__desc {
@@ -30,16 +54,36 @@
         line-height: 1.5;
 
         margin-top: 8px;
+
+        @include abstracts.screen(lg) {
+            margin-bottom: 18px;
+
+            text-align: center;
+            font-size: 1.5rem;
+        }
     }
 
     &__content {
         margin: 64px 0;
+
+        @include abstracts.screen(lg) {
+            margin: 30px 0;
+        }
     }
 
     &__row {
         display: grid;
         grid-template-columns: 1.6fr 1.2fr 1fr 0.6fr;
-        column-gap: 50.1px;
+        gap: 50px;
+
+        @include abstracts.screen(lg) {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+    }
+
+    &__logo {
+        margin-left: 0 !important;
     }
 
     &__contact {
@@ -54,6 +98,10 @@
             font-weight: 400;
             font-size: 1.5rem;
             line-height: 142.857%;
+
+            @include abstracts.screen(lg) {
+                font-size: 1.4rem;
+            }
         }
     }
 
@@ -62,6 +110,10 @@
         font-weight: 500;
         font-size: 1.6rem;
         line-height: 142.857%;
+
+        @include abstracts.screen(lg) {
+            font-size: 1.4rem;
+        }
     }
 
     &__socials {
@@ -85,6 +137,10 @@
         font-weight: 550;
         line-height: 146.667%;
 
+        @include abstracts.screen(lg) {
+            font-size: 1.6rem;
+        }
+
         &--gap {
             margin-top: 16px;
         }
@@ -95,6 +151,10 @@
         display: grid;
         grid-template-columns: auto;
         gap: 18px;
+
+        @include abstracts.screen(lg) {
+            gap: 12px;
+        }
     }
 
     &__link {
@@ -102,6 +162,10 @@
         font-weight: 400;
         font-size: 1.5rem;
         line-height: 142.857%;
+
+        @include abstracts.screen(lg) {
+            font-size: 1.4rem;
+        }
 
         &:hover {
             color: #0071dc;
@@ -118,5 +182,9 @@
         font-weight: 400;
         font-size: 1.6rem;
         line-height: 142.857%;
+
+        @include abstracts.screen(lg) {
+            font-size: 1.4rem;
+        }
     }
 }

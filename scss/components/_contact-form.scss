@@ -6,6 +6,14 @@
     justify-content: flex-end;
     gap: 12px;
 
+    @include abstracts.screen(lg) {
+        justify-content: center;
+    }
+
+    @include abstracts.screen(sm) {
+        flex-direction: column;
+    }
+
     &__input {
         color: var(--filter-form-label-color);
         width: 320px;
@@ -19,6 +27,10 @@
             font-size: 1.4rem;
             font-weight: 500;
             line-height: 1.43;
+        }
+
+        @include abstracts.screen(sm) {
+            width: 100%;
         }
     }
 
