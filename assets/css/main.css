@@ -2202,6 +2202,7 @@ html {
 }
 
 .btn {
+  align-content: center;
   height: 46px;
   padding: 0 20px;
   background: #f8f8fb;
@@ -2524,11 +2525,13 @@ html {
 }
 .contact-form__input {
   color: var(--filter-form-label-color);
+  font-size: 1.4rem;
+  font-weight: 500;
   width: 320px;
-  border-radius: 10px;
-  border: 1px solid var(--contact-form-input-border-color);
   height: 45px;
   padding: 0 12px;
+  border: 1px solid var(--contact-form-input-border-color);
+  border-radius: 10px;
 }
 .contact-form__input:placeholder-shown {
   color: var(--contact-form-placeholder-color);
