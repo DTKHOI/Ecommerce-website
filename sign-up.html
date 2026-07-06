@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,12 +25,22 @@
     <body>
         <main class="auth">
             <div class="auth__intro">
+                <a href="./" class="logo auth__intro-logo d-none d-md-flex">
+                    <img src="./assets/icon/logo.svg" alt="grocerymart" class="logo__img" />
+                    <h1 class="logo__title">grocerymart</h1>
+                </a>
+
                 <img src="./assets/img/auth/auth-intro.svg" alt="" class="auth__intro-img" />
                 <p class="auth__intro-text">
                     The best of luxury brand values, high quality products, and innovative services
                 </p>
+
+                <button class="auth__intro-next d-none d-md-flex js-toggle" toggle-target="#auth-content">
+                    <img src="./assets/img/auth/intro-arrow.svg" alt="" />
+                </button>
             </div>
-            <div class="auth__content">
+
+            <div id="auth-content" class="auth__content hide">
                 <div class="auth__content-inner">
                     <a href="./" class="logo auth__logo">
                         <img src="./assets/icon/logo.svg" alt="grocerymart" class="logo__img" />
@@ -39,16 +49,24 @@
 
                     <h1 class="auth__heading">Sign Up</h1>
                     <p class="auth__description">Let's create your account and Shop like a pro and save money.</p>
-                    <form action="" class="form auth__form">
+                    <form action="./index-logined.html" class="form auth__form">
                         <div class="form__group">
                             <div class="form__text-input">
-                                <input type="email" placeholder="Email" name="" id="" class="form__input" />
+                                <input type="email" placeholder="Email" name="" id="" class="form__input" required />
                                 <img src="./assets/img/auth/auth-message.svg" alt="" class="form__input-icon" />
                             </div>
                         </div>
                         <div class="form__group">
                             <div class="form__text-input">
-                                <input type="password" placeholder="Password" name="" id="" class="form__input" />
+                                <input
+                                    type="password"
+                                    placeholder="Password"
+                                    name=""
+                                    id=""
+                                    class="form__input"
+                                    required
+                                    minlength="6"
+                                />
                                 <img src="./assets/img/auth/auth-lock.svg" alt="" class="form__input-icon" />
                             </div>
                         </div>
@@ -88,5 +106,8 @@
                 </div>
             </div>
         </main>
+        <script>
+            window.dispatchEvent(new Event("template-loaded"));
+        </script>
     </body>
 </html>
