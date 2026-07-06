@@ -2569,6 +2569,10 @@ html {
   height: 44px;
 }
 
+.form:has(:invalid) .form__submit-btn {
+  opacity: 0.5;
+  pointer-events: none;
+}
 .form__group {
   margin-top: 30px;
 }
@@ -2576,6 +2580,16 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
+  border-color: orangered;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__error,
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-error {
+  display: block;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon {
+  display: none;
 }
 .form__text-input {
   border-radius: 10px;
@@ -2598,20 +2612,63 @@ html {
 }
 .form__input-icon {
   margin-left: 12px;
+  width: 20px;
+}
+.form__input-error {
+  display: none;
+  width: 20px;
+  margin-left: 12px;
+}
+.form__error {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 10px;
+  color: orangered;
+  display: none;
 }
 .form__pull-right {
   margin-left: auto;
 }
 .form__checkbox {
+  position: relative;
+  -webkit-user-select: none;
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 .form__checkbox-label {
+  margin-left: 29px;
   color: #b9babe;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.47;
+}
+.form__checkbox::before, .form__checkbox::after {
+  content: "";
+  position: absolute;
+}
+.form__checkbox::before {
+  width: 19px;
+  height: 19px;
+  border: 1.5px solid #9e9da8;
+  border-radius: 5px;
+}
+.form__checkbox::after {
+  width: 15px;
+  height: 8px;
+  border: 3px solid;
+  border-color: transparent transparent black black;
+  border-bottom-left-radius: 1.5px;
+  rotate: -45deg;
+  display: none;
+  left: 2px;
+  top: 5px;
+}
+.form__checkbox:has(:checked)::before {
+  background: #ffb700;
+  border-color: #ffb700;
+}
+.form__checkbox:has(:checked)::after {
+  display: block;
 }
 
 .home__container {
@@ -2742,6 +2799,10 @@ html {
 }
 .auth__btn {
   width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
 }
 .auth__text {
   color: var(--auth-text-color);
