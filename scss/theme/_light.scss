@@ -68,4 +68,12 @@ html {
 
     // Forms
     --form-input-color: #d2d1d6;
+
+    // Auth
+    --auth-intro-bg: #fafafd;
+    --auth-input-color: #171c28;
+
+    @include abstracts.screen(lg) {
+        --auth-intro-bg: white;
+    }
 }
