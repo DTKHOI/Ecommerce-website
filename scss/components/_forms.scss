@@ -150,4 +150,76 @@
             display: block;
         }
     }
+
+    &__label {
+        display: block;
+        color: var(--filter-form-label-color);
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 1.4545;
+
+        &--small {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            line-height: 1.43;
+        }
+    }
+
+    &__select-wrap {
+        height: 45px;
+
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+        display: flex;
+        align-items: center;
+    }
+
+    &__select {
+        color: var(--filter-form-label-color);
+
+        padding: 0 14px;
+        min-width: var(--width, 108px);
+        height: calc(100% - 10px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        font-size: 1.4rem;
+        line-height: 1.43;
+        font-weight: 500;
+
+        cursor: pointer;
+
+        @include abstracts.screen(xl) {
+            flex: 1;
+        }
+    }
+
+    &__select + &__select {
+        border-left: 1px solid #d2d1d6;
+    }
+
+    &__select-arrow {
+        width: 14px;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+    }
+
+    &__tag {
+        color: #9e9da8;
+        padding: 6px 12px;
+        font-size: 1.4rem;
+        line-height: 1.43;
+        font-weight: 500;
+        border-radius: 6px;
+        background: var(--form-tag-bg);
+
+        @include abstracts.screen(sm) {
+            gap: 10px;
+        }
+    }
 }
