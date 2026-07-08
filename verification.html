@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" class="">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign in | Grocery Mart</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Grocery" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- Script -->
+        <script src="./assets/js/script.js"></script>
+    </head>
+    <body>
+        <main class="auth">
+            <div class="auth__intro d-md-none">
+                <img src="./assets/img/auth/auth-forgot.svg" alt="" class="auth__intro-img" />
+            </div>
+
+            <div class="auth__content">
+                <div class="auth__content-inner">
+                    <a href="./" class="logo auth__logo">
+                        <img src="./assets/icon/logo.svg" alt="grocerymart" class="logo__img" />
+                        <h2 class="logo__title">grocerymart</h2>
+                    </a>
+
+                    <h1 class="auth__heading">Recovery Email Sent!</h1>
+                    <p class="auth__description">Please check your email and enter the verification code to continue</p>
+                    <form action="./new-password.html" class="form auth__form auth__form--forgot">
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input
+                                    type="number"
+                                    placeholder="Enter the verification"
+                                    name=""
+                                    id=""
+                                    class="form__input"
+                                    required
+                                    minlength="6"
+                                />
+                                <img src="./assets/img/auth/auth-lock.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icon/form-error.svg" alt="" class="form__input-error" />
+                            </div>
+                            <p class="form__error">Invalid verification</p>
+                        </div>
+                        <div class="form__group auth__btn-group auth__btn-group--forgot">
+                            <button class="btn auth__btn btn--primary form__submit-btn">Continue</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <script>
+            window.dispatchEvent(new Event("template-loaded"));
+        </script>
+    </body>
+</html>

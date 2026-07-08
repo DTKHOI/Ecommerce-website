@@ -50,6 +50,7 @@
     }
 
     &__content {
+        align-content: center;
         background: var(--auth-content-bg);
 
         @include abstracts.screen(md) {
@@ -114,6 +115,10 @@
         @include abstracts.screen(md) {
             margin-top: 0;
         }
+
+        &--forgot {
+            margin-top: 0;
+        }
     }
 
     &__link {
@@ -136,6 +141,10 @@
         @include abstracts.screen(md) {
             margin-top: 40px;
             gap: 20px;
+        }
+
+        &--forgot {
+            margin-top: 20px;
         }
     }
 

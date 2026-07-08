@@ -2779,6 +2779,7 @@ html {
   bottom: 50px;
 }
 .auth__content {
+  align-content: center;
   background: var(--auth-content-bg);
 }
 @media (max-width: 767.98px) {
@@ -2843,6 +2844,9 @@ html {
     margin-top: 0;
   }
 }
+.auth__form--forgot {
+  margin-top: 0;
+}
 .auth__link {
   color: #0071dc;
   font-size: 1.5rem;
@@ -2865,6 +2869,9 @@ html {
     margin-top: 40px;
     gap: 20px;
   }
+}
+.auth__btn-group--forgot {
+  margin-top: 20px;
 }
 .auth__btn {
   width: 100%;
