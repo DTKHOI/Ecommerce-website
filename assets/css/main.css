@@ -1356,6 +1356,7 @@ html.dark {
   --breadcrumbs-bg: #171c28;
   --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
   --breadcrumbs-current: white;
+  --prod-info-bg: #171c28;
 }
 
 html {
@@ -1426,6 +1427,7 @@ html {
   --breadcrumbs-bg: #f6f6f6;
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
   --breadcrumbs-current: inherit;
+  --prod-info-bg: #f6f6f6;
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -3000,6 +3002,7 @@ html {
 
 .prod-info {
   padding: 60px;
+  background: var(--prod-info-bg);
 }
 .prod-info__heading {
   color: var(--text-color);
@@ -3009,6 +3012,51 @@ html {
 }
 .prod-info__label {
   margin-top: 30px;
+}
+.prod-info__card {
+  margin-top: 30px;
+  border: 1px solid #b9babe;
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.prod-info__row {
+  display: flex;
+  gap: 10px;
+}
+.prod-info__price {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.prod-info__tax {
+  padding: 2px 8px;
+  color: #67b044;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.43;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #67b044;
+}
+.prod-info__total-price {
+  color: var(--text-color);
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 1.38;
+}
+.prod-info__like-btn {
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid var(--Secondary-Color-Secondary-3, #d2d1d6);
+  box-shadow: none;
+}
+.prod-info__btn-group {
+  gap: 30px;
+}
+.prod-info__card-btn {
+  flex: 1;
 }
 
 .prod-props {

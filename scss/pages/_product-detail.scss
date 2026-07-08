@@ -62,6 +62,7 @@
 
 .prod-info {
     padding: 60px;
+    background: var(--prod-info-bg);
 
     &__heading {
         color: var(--text-color);
@@ -72,6 +73,62 @@
 
     &__label {
         margin-top: 30px;
+    }
+
+    &__card {
+        margin-top: 30px;
+        border: 1px solid #b9babe;
+        border-radius: 6px;
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__row {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__price {
+        color: var(--text-color);
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    &__tax {
+        padding: 2px 8px;
+
+        color: #67b044;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.43;
+
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #67b044;
+    }
+
+    &__total-price {
+        color: var(--text-color);
+        font-size: 2.6rem;
+        font-weight: 500;
+        line-height: 1.38;
+    }
+
+    &__like-btn {
+        flex-shrink: 0;
+        border-radius: 6px;
+        border: 1px solid var(--Secondary-Color-Secondary-3, #d2d1d6);
+        box-shadow: none;
+    }
+
+    &__btn-group {
+        gap: 30px;
+    }
+
+    &__card-btn {
+        flex: 1;
     }
 }
 
