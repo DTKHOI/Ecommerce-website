@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 html.dark {
     --text-color: #fff;
     --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(331deg) brightness(103%)
@@ -6,6 +8,7 @@ html.dark {
     --body-bg: #292e39;
     --header-bg-color: #171c28;
     --header-shadow: rgba(0, 0, 0, 0.2);
+    --footer-bg-color: #171c28;
     --top-act-group-bg-color: #292e39;
     --top-act-group-shadow: 0 20px 60px 10px rgba(0, 0, 0, 0.2);
     --top-act-group-separate-bg: #ededf6;
@@ -75,4 +78,19 @@ html.dark {
 
     // Prod Info
     --prod-info-bg: #171c28;
+
+    @include abstracts.screen(md) {
+        --prod-info-bg: transparent;
+    }
+
+    --prod-info-tag-bg: #292e39;
+
+    // Search bar
+    --search-bar-bg: #171c28;
+    --search-bar-input-placeholder-color: #b9babe;
+    --product-detail-content-bg: transparent;
+
+    @include abstracts.screen(md) {
+        --product-detail-content-bg: #171c28;
+    }
 }

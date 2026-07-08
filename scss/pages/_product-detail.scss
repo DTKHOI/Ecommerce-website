@@ -11,11 +11,15 @@
 
 .product-container {
     margin-top: 30px;
+
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
 }
 
 .prod-info-content {
     border-radius: 20px;
-    background: white;
+    background: var(--product-detail-content-bg);
 }
 
 .product-preview {
@@ -92,6 +96,7 @@
 
 .prod-info {
     padding: 60px;
+    border-radius: 10px;
     background: var(--prod-info-bg);
 
     @include abstracts.screen(xxl) {
@@ -152,6 +157,10 @@
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #67b044;
     }
 
+    &__tag {
+        background: var(--prod-info-tag-bg);
+    }
+
     &__total-price {
         color: var(--text-color);
         font-size: 2.6rem;
@@ -193,7 +202,7 @@
     margin-top: 30px;
 
     @include abstracts.screen(md) {
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     &__icon {

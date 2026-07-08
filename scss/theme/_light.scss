@@ -11,6 +11,7 @@ html {
     --top-act-group-bg-color: white;
     --top-act-group-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.2);
     --top-act-group-separate-bg: #ededf6;
+    --footer-bg-color: #eee;
 
     //drowdown
     --dropdown-bg-color: white;
@@ -95,8 +96,14 @@ html {
 
     // Prod Info
     --prod-info-bg: #f6f6f6;
+    --prod-info-tag-bg: #ededf6;
 
     @include abstracts.screen(md) {
         --prod-info-bg: white;
     }
+
+    // Search bar
+    --product-detail-content-bg: white;
+    --search-bar-bg: white;
+    --search-bar-input-placeholder-color: #9e9da8;
 }

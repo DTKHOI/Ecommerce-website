@@ -2,7 +2,7 @@
 
 .footer {
     &__inner {
-        background: var(--header-bg-color);
+        background: var(--footer-bg-color);
         padding: 64px 0;
 
         @include abstracts.screen(lg) {
@@ -67,8 +67,8 @@
 
     &__row {
         display: grid;
-        grid-template-columns: 1.6fr 1.2fr 1fr 0.6fr;
-        gap: 50px;
+        grid-template-columns: 1fr 1.1fr 1fr 0.5fr;
+        gap: 40px;
 
         @include abstracts.screen(lg) {
             grid-template-columns: 1fr 1fr;
