@@ -1424,10 +1424,29 @@ html {
 }
 html {
   --product-detail-bg: white;
+}
+@media (max-width: 767.98px) {
+  html {
+    --product-detail-bg: #fafafd;
+  }
+}
+html {
   --breadcrumbs-bg: #f6f6f6;
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
   --breadcrumbs-current: inherit;
+}
+@media (max-width: 767.98px) {
+  html {
+    --breadcrumbs-bg: white;
+  }
+}
+html {
   --prod-info-bg: #f6f6f6;
+}
+@media (max-width: 767.98px) {
+  html {
+    --prod-info-bg: white;
+  }
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -1686,14 +1705,6 @@ html {
   margin-left: auto;
 }
 
-.footer {
-  margin-top: 60px;
-}
-@media (max-width: 991.98px) {
-  .footer {
-    margin-top: 45px;
-  }
-}
 .footer__inner {
   background: var(--header-bg-color);
   padding: 64px 0;
@@ -2731,6 +2742,7 @@ html {
 @media (max-width: 767.98px) {
   .breadcrumbs {
     gap: 16px;
+    border-radius: 20px;
   }
 }
 .breadcrumbs__link {
@@ -2752,6 +2764,9 @@ html {
   color: var(--breadcrumbs-current);
 }
 
+.home {
+  margin-bottom: 50px;
+}
 .home__container {
   margin-top: 40px;
 }
@@ -2951,11 +2966,17 @@ html {
   display: flex;
   flex-direction: column;
   min-height: 80vh;
+  padding-bottom: 50px;
   background: var(--product-detail-bg);
 }
 
 .product-container {
   margin-top: 30px;
+}
+
+.prod-info-content {
+  border-radius: 20px;
+  background: white;
 }
 
 .product-preview {
@@ -2965,6 +2986,11 @@ html {
   .product-preview {
     display: flex;
     flex-direction: row-reverse;
+  }
+}
+@media (max-width: 767.98px) {
+  .product-preview {
+    padding: 16px;
   }
 }
 .product-preview__list {
@@ -3036,6 +3062,12 @@ html {
     margin-top: 30px;
   }
 }
+@media (max-width: 767.98px) {
+  .prod-info {
+    border-radius: 20px;
+    padding: 0 16px 16px;
+  }
+}
 .prod-info__heading {
   color: var(--text-color);
   font-size: 2.6rem;
@@ -3099,14 +3131,27 @@ html {
     padding-left: 10px;
   }
 }
+@media (max-width: 991.98px) {
+  .prod-props {
+    padding-left: 0px;
+  }
+}
 
 .prod-prop {
   display: flex;
   gap: 16px;
   margin-top: 30px;
 }
+@media (max-width: 767.98px) {
+  .prod-prop {
+    margin-top: 20px;
+  }
+}
 .prod-prop__icon {
   align-self: flex-start;
+}
+.prod-prop__icon--center {
+  align-self: center;
 }
 .prod-prop__title {
   color: var(--text-color);

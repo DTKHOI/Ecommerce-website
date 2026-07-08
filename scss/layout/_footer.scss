@@ -1,12 +1,6 @@
 @use "../abstracts";
 
 .footer {
-    margin-top: 60px;
-
-    @include abstracts.screen(lg) {
-        margin-top: 45px;
-    }
-
     &__inner {
         background: var(--header-bg-color);
         padding: 64px 0;

@@ -80,11 +80,23 @@ html {
     //Product detail
     --product-detail-bg: white;
 
+    @include abstracts.screen(md) {
+        --product-detail-bg: #fafafd;
+    }
+
     //Breadcrumbs
     --breadcrumbs-bg: #f6f6f6;
     --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
     --breadcrumbs-current: inherit;
 
+    @include abstracts.screen(md) {
+        --breadcrumbs-bg: white;
+    }
+
     // Prod Info
     --prod-info-bg: #f6f6f6;
+
+    @include abstracts.screen(md) {
+        --prod-info-bg: white;
+    }
 }
