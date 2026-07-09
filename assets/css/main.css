@@ -139,6 +139,10 @@ table {
   box-sizing: border-box;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -161,7 +165,6 @@ select {
   border: none;
   background: transparent;
   padding: 0;
-  -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -1475,6 +1478,11 @@ html {
   --search-bar-bg: white;
   --search-bar-input-placeholder-color: #9e9da8;
   --review-card-bg: #fafafd;
+}
+@media (max-width: 767.98px) {
+  html {
+    --review-card-bg: white;
+  }
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -2824,10 +2832,27 @@ html {
   border-radius: 16px;
   background: var(--review-card-bg);
   padding: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .review-card__content {
   display: flex;
   gap: 20px;
+}
+@media (max-width: 1199.98px) {
+  .review-card__content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .review-card__content {
+    flex-direction: row;
+    align-items: initial;
+    text-align: initial;
+  }
 }
 .review-card__avt {
   width: 80px;
@@ -2851,12 +2876,130 @@ html {
   display: flex;
   align-items: center;
 }
+@media (max-width: 1199.98px) {
+  .review-card__rating {
+    flex-direction: column;
+    margin-top: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .review-card__rating {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .review-card__rating {
+    gap: 18px;
+  }
+}
 .review-card__rating-title {
   color: var(--text-color);
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.44;
   margin-left: 20px;
+}
+@media (max-width: 1199.98px) {
+  .review-card__rating-title {
+    margin-left: 0;
+  }
+}
+
+.text-content {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.text-content h2,
+.text-content h3,
+.text-content h4,
+.text-content h5,
+.text-content h6,
+.text-content img,
+.text-content p,
+.text-content figure,
+.text-content blockquote,
+.text-content ul,
+.text-content ol,
+.text-content li,
+.text-content table {
+  margin: 20px 0;
+}
+.text-content h3,
+.text-content h4,
+.text-content h5,
+.text-content h6 {
+  font-weight: 500;
+}
+.text-content h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.text-content h3 {
+  font-size: 1.8rem;
+}
+.text-content h4 {
+  font-size: 1.6rem;
+}
+.text-content h5 {
+  font-size: 1.4rem;
+}
+.text-content h6 {
+  font-size: 1.2rem;
+}
+.text-content img {
+  object-fit: contain;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-content img + em {
+  display: block;
+  text-align: center;
+}
+.text-content em,
+.text-content i {
+  font-style: italic;
+}
+.text-content b,
+.text-content strong {
+  font-weight: 600;
+}
+.text-content ol,
+.text-content ul {
+  list-style: unset;
+}
+.text-content li {
+  margin-left: 20px;
+}
+.text-content blockquote {
+  border-left: 3px solid #77dae6;
+  background: rgba(119, 218, 230, 0.1);
+  padding: 20px;
+}
+.text-content blockquote > p {
+  margin: 0;
+}
+.text-content table {
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+.text-content table th {
+  background-color: #c47f3a; /* coffee brown accent */
+  font-weight: 600;
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+}
+.text-content table td {
+  font-weight: 500;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.text-content table tr:nth-child(even) {
+  background-color: var(--prod-info-bg);
 }
 
 .home {
@@ -3275,12 +3418,29 @@ html {
   display: flex;
   align-items: center;
 }
+@media (max-width: 767.98px) {
+  .prod-tab__list {
+    margin: 0 -20px;
+    flex-wrap: wrap;
+  }
+}
 .prod-tab__item {
   padding: 0 30px;
   color: #9e9da8;
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 1.46;
+  user-select: none;
+  white-space: nowrap;
+}
+@media (max-width: 767.98px) {
+  .prod-tab__item {
+    font-size: 1.8rem;
+    padding: 8px 20px;
+  }
+}
+.prod-tab__item:not(.prod-tab__item--actived) {
+  cursor: pointer;
 }
 .prod-tab__item--actived {
   color: var(--text-color);
@@ -3291,12 +3451,15 @@ html {
 .prod-tab__content--actived {
   display: block;
 }
+.prod-tab__text-content {
+  padding-top: 10px;
+}
 
 .prod-content__heading {
   margin: 30px 0;
   color: var(--text-color);
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 600;
   line-height: 1.42;
 }
 

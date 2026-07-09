@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -28,7 +32,6 @@ select {
     border: none;
     background: transparent;
     padding: 0;
-    -webkit-tap-highlight-color: transparent;
 }
 
 button {
