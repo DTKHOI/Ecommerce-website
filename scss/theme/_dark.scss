@@ -93,4 +93,7 @@ html.dark {
     @include abstracts.screen(md) {
         --product-detail-content-bg: #171c28;
     }
+
+    // Review card
+    --review-card-bg: #171c28;
 }

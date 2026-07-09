@@ -1375,6 +1375,9 @@ html.dark {
     --product-detail-content-bg: #171c28;
   }
 }
+html.dark {
+  --review-card-bg: #171c28;
+}
 
 html {
   --text-color: #1a162e;
@@ -1471,6 +1474,7 @@ html {
   --product-detail-content-bg: white;
   --search-bar-bg: white;
   --search-bar-input-placeholder-color: #9e9da8;
+  --review-card-bg: #fafafd;
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -2315,6 +2319,10 @@ html {
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   padding: 16px;
   border-radius: 20px;
   background: var(--product-card-bg);
@@ -2812,6 +2820,45 @@ html {
   padding: 0 15px;
 }
 
+.review-card {
+  border-radius: 16px;
+  background: var(--review-card-bg);
+  padding: 30px;
+}
+.review-card__content {
+  display: flex;
+  gap: 20px;
+}
+.review-card__avt {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.review-card__title {
+  color: var(--text-color);
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+.review-card__comment {
+  margin: 10px 0 20px;
+  color: var(--text-color);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+.review-card__rating {
+  display: flex;
+  align-items: center;
+}
+.review-card__rating-title {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44;
+  margin-left: 20px;
+}
+
 .home {
   margin-bottom: 50px;
 }
@@ -3221,6 +3268,36 @@ html {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.43;
+}
+
+.prod-tab__list {
+  margin: 0 -30px;
+  display: flex;
+  align-items: center;
+}
+.prod-tab__item {
+  padding: 0 30px;
+  color: #9e9da8;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.46;
+}
+.prod-tab__item--actived {
+  color: var(--text-color);
+}
+.prod-tab__content {
+  display: none;
+}
+.prod-tab__content--actived {
+  display: block;
+}
+
+.prod-content__heading {
+  margin: 30px 0;
+  color: var(--text-color);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42;
 }
 
 /*# sourceMappingURL=main.css.map */
