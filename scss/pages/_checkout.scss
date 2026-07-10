@@ -50,12 +50,16 @@
         align-items: center;
         justify-content: space-between;
 
+        margin-top: 10px;
+
         color: var(--cart-item-title-color);
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 1.44;
 
-        margin-top: 10px;
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
     }
 
     &__separate {
@@ -68,6 +72,10 @@
         font-size: 2.2rem;
         font-weight: 700;
         line-height: 1.45;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
     }
 
     &__continue {
@@ -118,6 +126,12 @@
 
         font-size: 2.2rem;
         line-height: 1.46;
+
+        @include abstracts.screen(md) {
+            margin-top: 16px;
+            font-size: 1.6rem;
+            height: 60px;
+        }
     }
 }
 
@@ -129,6 +143,7 @@
 
     @include abstracts.screen(md) {
         padding: 16px;
+        gap: 16px;
 
         &:last-child {
             border: none;
@@ -186,6 +201,12 @@
         line-height: 1.44;
         max-width: 374px;
 
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.43;
+        }
+
         a {
             color: inherit;
         }
@@ -241,6 +262,11 @@
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 1.47;
+
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+                line-height: 1.43;
+            }
         }
     }
 
@@ -252,7 +278,11 @@
         text-align: right;
 
         @include abstracts.screen(md) {
+            margin-bottom: 13px;
+
             text-align: left;
+            font-size: 1.8rem;
+            line-height: 1.44;
         }
     }
 
@@ -288,6 +318,18 @@
         border-radius: 14px;
         background: var(--gift-item-icon-wrap-bg);
         box-shadow: 0 20px 60px 10px var(--gift-item-icon-wrap-shadow);
+
+        @include abstracts.screen(md) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    &__icon {
+        @include abstracts.screen(md) {
+            width: 44px;
+            height: 44px;
+        }
     }
 
     &__title {
@@ -295,6 +337,10 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 1.44;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
     }
 
     &__desc {
