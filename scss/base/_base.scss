@@ -49,6 +49,10 @@ a {
     filter: var(--icon-color);
 }
 
+.icon-2 {
+    filter: var(--icon-color-2);
+}
+
 .container {
     @include abstracts.screen(sm) {
         padding-left: 20px !important;

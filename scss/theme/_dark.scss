@@ -4,6 +4,8 @@ html.dark {
     --text-color: #fff;
     --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(331deg) brightness(103%)
         contrast(101%);
+    --icon-color-2: brightness(0) saturate(100%) invert(82%) sepia(0%) saturate(4437%) hue-rotate(96deg) brightness(87%)
+        contrast(106%);
 
     --body-bg: #292e39;
     --header-bg-color: #171c28;
@@ -80,6 +82,7 @@ html.dark {
     --breadcrumbs-bg: #171c28;
     --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
     --breadcrumbs-current: white;
+    --checkout-breadcrumb-bg: #171c28;
 
     // Prod Info
     --prod-info-bg: #171c28;
@@ -110,4 +113,8 @@ html.dark {
     --cart-item-title-color: #b9babe;
     --cart-item-input-border-color: #292e39;
     --cart-item-border-color: #292e39;
+
+    // Gift item
+    --gift-item-icon-wrap-bg: #292e39;
+    --gift-item-icon-wrap-shadow: none;
 }
