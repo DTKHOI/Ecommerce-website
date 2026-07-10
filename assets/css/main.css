@@ -2445,6 +2445,7 @@ html {
   padding: 0 20px;
   background: #f8f8fb;
   display: inline-block;
+  white-space: nowrap;
   text-align: center;
   font-size: 1.8rem;
   font-weight: 500;
@@ -3151,6 +3152,80 @@ html {
 }
 .text-content table tr:nth-child(even) {
   background-color: var(--prod-info-bg);
+}
+
+.dialog__overlay, .dialog {
+  position: fixed;
+  inset: 0;
+}
+
+.dialog {
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+.dialog.show {
+  opacity: 1;
+  visibility: visible;
+}
+.dialog__overlay {
+  background: rgba(0, 0, 0, 0.1);
+}
+.dialog__content {
+  max-width: min(450px, 100% - 40px);
+  position: relative;
+  z-index: 1;
+  background: var(--auth-content-bg);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px 10px var(--gift-item-icon-wrap-shadow);
+  padding: 30px;
+}
+@media (max-width: 991.98px) {
+  .dialog__content {
+    max-width: calc(100% - 60px);
+  }
+}
+@media (max-width: 767.98px) {
+  .dialog__content {
+    padding: 20px;
+  }
+}
+.dialog__text {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+@media (max-width: 767.98px) {
+  .dialog__text {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .dialog__bottom {
+    margin-top: 16px !important;
+    gap: 10px;
+  }
+}
+.dialog__bottom {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.dialog__btn {
+  margin: 0 !important;
+  flex: 1;
+}
+@media (max-width: 767.98px) {
+  .dialog__btn {
+    font-size: 1.6rem;
+  }
 }
 
 .home {
