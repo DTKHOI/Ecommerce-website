@@ -1801,6 +1801,11 @@ html {
   border-color: #d2d1d6;
   border-style: solid;
 }
+.act-dropdown__separate {
+  height: 1px;
+  background: #d2d1d6;
+  margin: 20px 0;
+}
 .act-dropdown__row {
   display: flex;
   align-items: center;

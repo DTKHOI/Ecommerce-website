@@ -346,6 +346,12 @@
         border-style: solid;
     }
 
+    &__separate {
+        height: 1px;
+        background: #d2d1d6;
+        margin: 20px 0;
+    }
+
     &__row {
         display: flex;
         align-items: center;
