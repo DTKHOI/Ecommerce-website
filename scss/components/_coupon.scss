@@ -1,0 +1,68 @@
+.coupon {
+    display: flex;
+    gap: 5px;
+
+    &__left {
+        padding: 21px;
+        display: inline-block;
+        align-content: center;
+        background: #3cc06f;
+        border-radius: 20px 0 0 20px;
+        box-shadow:
+            0 4px 8px -3px rgba(35, 39, 47, 0.12),
+            0 2px 4px -3px rgba(35, 39, 47, 0.04);
+    }
+
+    &__title {
+        writing-mode: sideways-lr;
+        text-align: center;
+        color: white;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    &__right {
+        flex: 1;
+        padding: 12px;
+        background: white;
+        border-radius: 0 16px 16px 0;
+    }
+
+    &__label {
+        color: #5b5760;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.57;
+    }
+
+    &__code {
+        color: #232027;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.57;
+    }
+
+    &__desc {
+        color: #393540;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.67;
+    }
+
+    &__btn {
+        color: #232027;
+        margin-top: 17px;
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 1.67;
+    }
+
+    &__condition {
+        color: #3c0eb9;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.68;
+    }
+}
