@@ -6,6 +6,16 @@
         pointer-events: none;
     }
 
+    &__row {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        column-gap: 30px;
+
+        @include abstracts.screen(md) {
+            grid-template-columns: 1fr;
+        }
+    }
+
     &__group {
         margin-top: 30px;
 
@@ -35,25 +45,43 @@
         }
     }
 
+    &__text-area,
     &__text-input {
-        border-radius: 10px;
-        border: 1.5px solid var(--form-input-color);
-
-        height: 50px;
-        padding: 0 12px;
         display: flex;
         align-items: center;
+
+        border: 1.5px solid var(--form-input-color);
+        border-radius: 10px;
 
         &:focus-within {
             border-color: #77dae6;
         }
+
+        &--small {
+            height: 42px !important;
+        }
+    }
+
+    &__text-input {
+        height: 50px;
+        padding: 0 12px;
 
         @include abstracts.screen(md) {
             height: 48px;
         }
     }
 
-    &__input {
+    &__text-area {
+        padding: 12px;
+
+        &-input {
+            width: 100%;
+            resize: none;
+        }
+    }
+
+    &__input,
+    &__text-area-input {
         flex: 1;
         height: 100%;
 
@@ -61,11 +89,6 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 1.44;
-
-        &-icon {
-            margin-left: 12px;
-            width: 20px;
-        }
 
         &-error {
             display: none;
@@ -79,6 +102,13 @@
 
         @include abstracts.screen(md) {
             font-size: 1.6rem;
+        }
+    }
+
+    &__input {
+        &-icon {
+            margin-left: 12px;
+            width: 20px;
         }
     }
 

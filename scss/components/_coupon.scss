@@ -1,6 +1,8 @@
 .coupon {
     display: flex;
     gap: 5px;
+    outline: 1.5px solid #5b5760;
+    border-radius: 20px 16px 16px 20px;
 
     &__left {
         padding: 21px;

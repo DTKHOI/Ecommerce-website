@@ -153,6 +153,15 @@ body {
   background: var(--body-bg);
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-webkit-autofill:hover {
+  transition: background-color 0.3s 9999s;
+  -webkit-text-fill-color: var(--text-color);
+  caret-color: var(--text-color);
+}
+
 a,
 input,
 img,
@@ -2748,6 +2757,16 @@ html {
   opacity: 0.5;
   pointer-events: none;
 }
+.form__row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  column-gap: 30px;
+}
+@media (max-width: 767.98px) {
+  .form__row {
+    grid-template-columns: 1fr;
+  }
+}
 .form__group {
   margin-top: 30px;
 }
@@ -2771,23 +2790,35 @@ html {
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon {
   display: none;
 }
-.form__text-input {
-  border-radius: 10px;
-  border: 1.5px solid var(--form-input-color);
-  height: 50px;
-  padding: 0 12px;
+.form__text-area, .form__text-input {
   display: flex;
   align-items: center;
+  border: 1.5px solid var(--form-input-color);
+  border-radius: 10px;
 }
-.form__text-input:focus-within {
+.form__text-area:focus-within, .form__text-input:focus-within {
   border-color: #77dae6;
+}
+.form__text-area--small, .form__text-input--small {
+  height: 42px !important;
+}
+.form__text-input {
+  height: 50px;
+  padding: 0 12px;
 }
 @media (max-width: 767.98px) {
   .form__text-input {
     height: 48px;
   }
 }
-.form__input {
+.form__text-area {
+  padding: 12px;
+}
+.form__text-area-input {
+  width: 100%;
+  resize: none;
+}
+.form__input, .form__text-area-input {
   flex: 1;
   height: 100%;
   color: var(--auth-input-color);
@@ -2795,22 +2826,22 @@ html {
   font-weight: 500;
   line-height: 1.44;
 }
-.form__input-icon {
-  margin-left: 12px;
-  width: 20px;
-}
-.form__input-error {
+.form__input-error, .form__text-area-input-error {
   display: none;
   width: 20px;
   margin-left: 12px;
 }
-.form__input::placeholder {
+.form__input::placeholder, .form__text-area-input::placeholder {
   color: var(--form-input-color);
 }
 @media (max-width: 767.98px) {
-  .form__input {
+  .form__input, .form__text-area-input {
     font-size: 1.6rem;
   }
+}
+.form__input-icon {
+  margin-left: 12px;
+  width: 20px;
 }
 .form__error {
   font-size: 1.4rem;
@@ -3165,47 +3196,84 @@ html {
   background-color: var(--prod-info-bg);
 }
 
-.dialog__overlay, .dialog {
+.modal__overlay, .modal {
   position: fixed;
   inset: 0;
 }
 
-.dialog {
+.modal {
   z-index: 99;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   visibility: hidden;
-  transition: 0.2s;
+  transition: backdrop-filter 0.1ms, opacity 0.3s, visibility 0.3s;
 }
-.dialog.show {
+.modal.show {
   opacity: 1;
   visibility: visible;
+  backdrop-filter: blur(10px);
 }
-.dialog__overlay {
-  background: rgba(0, 0, 0, 0.1);
+.modal.show .modal__overlay {
+  background: rgba(25, 29, 30, 0.6);
 }
-.dialog__content {
-  max-width: min(450px, 100% - 40px);
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  color: var(--text-color);
+  font-size: 4rem;
+  padding: 0 20px;
+}
+.modal--small .modal__content {
+  width: min(400px, 100% - 40px);
+}
+.modal--large .modal__content {
+  width: min(1100px, 100% - 40px);
+}
+.modal--fill .modal__content {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.modal__heading {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+@media (max-width: 767.98px) {
+  .modal__heading {
+    font-size: 1.8rem;
+  }
+}
+.modal__body {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+.modal__content {
   position: relative;
   z-index: 1;
   background: var(--auth-content-bg);
   border-radius: 20px;
   box-shadow: 0 20px 60px 10px var(--gift-item-icon-wrap-shadow);
+  width: min(800px, 100% - 40px);
   padding: 30px;
 }
 @media (max-width: 991.98px) {
-  .dialog__content {
-    max-width: calc(100% - 60px);
+  .modal__content {
+    width: calc(100% - 60px);
   }
 }
 @media (max-width: 767.98px) {
-  .dialog__content {
+  .modal__content {
     padding: 20px;
   }
 }
-.dialog__text {
+.modal__text {
   text-align: center;
   color: var(--text-color);
   font-size: 2.2rem;
@@ -3213,28 +3281,31 @@ html {
   line-height: 1.5;
 }
 @media (max-width: 767.98px) {
-  .dialog__text {
+  .modal__text {
     font-size: 1.8rem;
   }
 }
 @media (max-width: 767.98px) {
-  .dialog__bottom {
+  .modal__bottom {
     margin-top: 16px !important;
     gap: 10px;
   }
 }
-.dialog__bottom {
+.modal__bottom {
   margin-top: 30px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.dialog__btn {
-  margin: 0 !important;
+.modal__btn {
   flex: 1;
 }
+.modal__btn--small {
+  margin-left: auto;
+  flex: 0;
+}
 @media (max-width: 767.98px) {
-  .dialog__btn {
+  .modal__btn {
     font-size: 1.6rem;
   }
 }
@@ -3281,6 +3352,8 @@ html {
 .coupon {
   display: flex;
   gap: 5px;
+  outline: 1.5px solid #5b5760;
+  border-radius: 20px 16px 16px 20px;
 }
 .coupon__left {
   padding: 21px;
