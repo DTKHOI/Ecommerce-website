@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -420,7 +420,7 @@
         </div>
 
         <!-- Modal: add new shopping address -->
-        <div id="add-new-address" class="modal hide">
+        <div id="add-new-address" class="modal">
             <div class="modal__content">
                 <h2 class="modal__heading">Add new shopping address</h2>
                 <div class="modal__body">
@@ -488,10 +488,78 @@
                                     name="City/District/Town"
                                     id="City/District/Town"
                                     minlength="2"
-                                    class="form__input"
+                                    class="form__input js-toggle"
                                     required
+                                    toggle-target="#select-dialog"
                                 />
                                 <img src="./assets/icon/form-error.svg" alt="" class="form__input-error" />
+
+                                <div id="select-dialog" class="form__select-dialog hide">
+                                    <div class="form__search">
+                                        <input
+                                            type="text"
+                                            name=""
+                                            id=""
+                                            placeholder="Search"
+                                            class="form__search-input"
+                                        />
+                                        <img src="./assets/icon/search.svg" alt="" class="form__search-icon" />
+                                    </div>
+                                    <ul class="form__options-list">
+                                        <li
+                                            class="form__option form__option--current js-toggle"
+                                            toggle-target="#select-dialog"
+                                        >
+                                            An Giang
+                                        </li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Bac Ninh</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Ca Mau</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Can Tho</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Cao Bang</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Da Nang</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Dak Lak</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Dak Nong</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Dien Bien</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Dong Nai</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Dong Thap</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Gia Lai</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Ha Noi</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Ha Tinh</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Hai Phong</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Hau Giang</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">
+                                            Ho Chi Minh
+                                        </li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Hue</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Hung Yen</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Khanh Hoa</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Lai Chau</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Lang Sơn</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Lao Cai</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Nghe An</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Ninh Binh</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Phu Tho</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">
+                                            Quang Binh
+                                        </li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">
+                                            Quang Ngai
+                                        </li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">
+                                            Quang Ninh
+                                        </li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Son La</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Tay Ninh</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">
+                                            Thai Nguyen
+                                        </li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Thanh Hoa</li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">
+                                            Tuyen Quang
+                                        </li>
+                                        <li class="form__option js-toggle" toggle-target="#select-dialog">Vinh Long</li>
+                                    </ul>
+                                </div>
                             </div>
                             <p class="form__error">this field must be at least 2 characters</p>
                         </div>

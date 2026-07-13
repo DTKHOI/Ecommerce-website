@@ -63,6 +63,7 @@
     }
 
     &__text-input {
+        position: relative;
         height: 50px;
         padding: 0 12px;
 
@@ -109,6 +110,92 @@
         &-icon {
             margin-left: 12px;
             width: 20px;
+        }
+    }
+
+    &__input:focus ~ &__select-dialog {
+        opacity: 1;
+        visibility: visible;
+        translate: 0;
+    }
+
+    &__select-dialog {
+        position: absolute;
+        bottom: 43px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+
+        background: var(--body-bg);
+
+        opacity: 0;
+        visibility: hidden;
+        translate: 0 20px;
+        transition: 0.1s;
+
+        min-width: 230px;
+        max-height: 295px;
+        padding-bottom: 10px;
+        border: 1px solid var(--cart-item-input-border-color);
+        border-radius: 10px;
+
+        box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.15);
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            translate: 0;
+        }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        border-bottom: 1px solid var(--cart-item-input-border-color);
+
+        height: 38px;
+        padding: 0 20px;
+
+        &-input {
+            color: var(--text-color);
+            flex: 1;
+            height: 100%;
+        }
+
+        &-icon {
+            width: 15px;
+            margin-left: 10px;
+        }
+
+        @include abstracts.screen(lg) {
+            height: 42px;
+        }
+    }
+
+    &__options-list {
+        flex: 1;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    &__option {
+        color: var(--text-color);
+        padding: 8px 20px;
+        font-size: 1.4rem;
+
+        &--current {
+            background: rgba($color: #ffb700, $alpha: 0.5);
+            font-weight: 500;
+        }
+
+        &:not(&--current):hover {
+            cursor: pointer;
+            background: rgba($color: #77dae6, $alpha: 0.4);
+        }
+
+        @include abstracts.screen(lg) {
+            padding: 14px 20px;
         }
     }
 
