@@ -40,7 +40,9 @@
 
 // Button
 .btn {
-    align-content: center;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
 
     height: 46px;
     padding: 0 20px;
@@ -77,6 +79,10 @@
 
     &--rounded {
         border-radius: 99px;
+    }
+
+    &--small {
+        height: 40px;
     }
 
     &[disabled],

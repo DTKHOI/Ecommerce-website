@@ -2446,7 +2446,9 @@ html {
 }
 
 .btn {
-  align-content: center;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
   height: 46px;
   padding: 0 20px;
   background: #f8f8fb;
@@ -2475,6 +2477,9 @@ html {
 }
 .btn--rounded {
   border-radius: 99px;
+}
+.btn--small {
+  height: 40px;
 }
 .btn[disabled], .btn--disable {
   opacity: 0.5;
@@ -3894,14 +3899,12 @@ html {
   display: flex;
   align-items: end;
   color: var(--cart-item-title-color);
-}
-.cart-info__continue a {
-  color: inherit;
-}
-.cart-info__continue {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.44;
+}
+.cart-info__continue a {
+  color: inherit;
 }
 .cart-info__continue-link {
   display: flex;
@@ -4156,6 +4159,13 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+}
+@media (max-width: 767.98px) {
+  .user-address__top {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 .user-address__title {
   color: var(--cart-info-heading-color);
@@ -4169,10 +4179,34 @@ html {
   font-weight: 400;
   line-height: 1.47;
 }
+.user-address__message {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.4rem;
+}
+.user-address__btn {
+  gap: 10px;
+}
+@media (max-width: 767.98px) {
+  .user-address__btn {
+    height: 46px;
+  }
+}
+.user-address__link {
+  font-weight: 500;
+  color: #77dae6;
+  line-height: 1.44;
+}
 
 .address-card {
   display: flex;
   margin-top: 30px;
+  gap: 16px;
+}
+@media (max-width: 767.98px) {
+  .address-card {
+    flex-direction: column;
+  }
 }
 .address-card__left {
   flex: 1;
@@ -4191,6 +4225,7 @@ html {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.47;
+  width: min(520px, 90%);
 }
 .address-card__list {
   margin-top: 20px;
@@ -4202,6 +4237,12 @@ html {
   line-height: 1.43;
   list-style: disc inside;
 }
+@media (max-width: 575.98px) {
+  .address-card__list {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
 .address-card__list-item {
   margin-left: 8px;
 }
@@ -4210,13 +4251,31 @@ html {
   display: flex;
   align-items: flex-end;
 }
+@media (max-width: 767.98px) {
+  .address-card__ctrl {
+    justify-content: flex-end;
+  }
+}
 .address-card__ctrl-btn {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: var(--cart-info-heading-color);
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.44;
+}
+.address-card__checkbox-input {
+  appearance: none;
+}
+.address-card__checkbox-input::before {
+  content: url(../icon/checkbox-unchecked.svg);
+}
+.address-card__checkbox-input:not(:checked)::before {
+  filter: var(--icon-color-2);
+}
+.address-card__checkbox-input:checked::before {
+  content: url(../icon/checkbox-checked.svg);
 }
 
 /*# sourceMappingURL=main.css.map */

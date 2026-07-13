@@ -83,14 +83,13 @@
         display: flex;
         align-items: end;
         color: var(--cart-item-title-color);
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
 
         a {
             color: inherit;
         }
-
-        font-size: 1.8rem;
-        font-weight: 500;
-        line-height: 1.44;
 
         &-link {
             display: flex;
@@ -374,6 +373,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 16px;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            align-items: start;
+        }
     }
 
     &__title {
@@ -389,11 +394,36 @@
         font-weight: 400;
         line-height: 1.47;
     }
+
+    &__message {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 1.4rem;
+    }
+
+    &__btn {
+        gap: 10px;
+
+        @include abstracts.screen(md) {
+            height: 46px;
+        }
+    }
+
+    &__link {
+        font-weight: 500;
+        color: #77dae6;
+        line-height: 1.44;
+    }
 }
 
 .address-card {
     display: flex;
     margin-top: 30px;
+    gap: 16px;
+
+    @include abstracts.screen(md) {
+        flex-direction: column;
+    }
 
     &__left {
         flex: 1;
@@ -414,6 +444,8 @@
         font-size: 1.5rem;
         font-weight: 400;
         line-height: 1.47;
+
+        width: min(520px, 90%);
     }
 
     &__list {
@@ -427,6 +459,11 @@
         line-height: 1.43;
         list-style: disc inside;
 
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            gap: 16px;
+        }
+
         &-item {
             margin-left: 8px;
         }
@@ -437,14 +474,37 @@
         display: flex;
         align-items: flex-end;
 
+        @include abstracts.screen(md) {
+            justify-content: flex-end;
+        }
+
         &-btn {
             display: flex;
             align-items: center;
             gap: 10px;
 
+            color: var(--cart-info-heading-color);
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 1.44;
+        }
+    }
+
+    &__checkbox {
+        &-input {
+            appearance: none;
+
+            &::before {
+                content: url(../icon/checkbox-unchecked.svg);
+            }
+
+            &:not(:checked)::before {
+                filter: var(--icon-color-2);
+            }
+
+            &:checked::before {
+                content: url(../icon/checkbox-checked.svg);
+            }
         }
     }
 }
