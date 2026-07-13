@@ -133,6 +133,22 @@
             height: 60px;
         }
     }
+
+    &__heading {
+        color: var(--cart-info-heading-color);
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.42;
+    }
+
+    &__sub-heading {
+        color: var(--text-color);
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+
+        margin: 30px 0;
+    }
 }
 
 .cart-item {
@@ -350,5 +366,85 @@
         font-size: 1.4rem;
         font-weight: 400;
         line-height: 1.43;
+    }
+}
+
+.user-address {
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__title {
+        color: var(--cart-info-heading-color);
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+    }
+
+    &__desc {
+        color: var(--cart-info-heading-color);
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.47;
+    }
+}
+
+.address-card {
+    display: flex;
+    margin-top: 30px;
+
+    &__left {
+        flex: 1;
+        display: flex;
+        gap: 16px;
+    }
+
+    &__title {
+        color: var(--cart-info-heading-color);
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44;
+    }
+
+    &__desc {
+        margin-top: 4px;
+        color: var(--cart-info-heading-color);
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.47;
+    }
+
+    &__list {
+        margin-top: 20px;
+        display: flex;
+        gap: 30px;
+        margin-top: 20px;
+
+        color: var(--cart-info-heading-color);
+        font-size: 1.4rem;
+        line-height: 1.43;
+        list-style: disc inside;
+
+        &-item {
+            margin-left: 8px;
+        }
+    }
+
+    &__ctrl {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+
+        &-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 1.44;
+        }
     }
 }
