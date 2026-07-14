@@ -151,6 +151,7 @@ body {
   font-family: "Gordita", "sans-serif";
   font-size: 1.6rem;
   background: var(--body-bg);
+  color: var(--text-color);
 }
 
 input:-webkit-autofill,
@@ -4144,6 +4145,26 @@ html {
   color: var(--text-color-2);
   font-size: 1.8rem;
 }
+.cart-info__desc {
+  margin-top: 6px;
+  color: var(--text-color-2);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.47;
+}
+.cart-info__form-group {
+  margin-top: 20px;
+}
+.cart-info__form-row {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.cart-info__text-input {
+  margin-top: 0;
+}
+.cart-info__form {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
 
 .cart-item {
   display: flex;
@@ -4509,6 +4530,17 @@ html {
 }
 .payment-item__checkbox-input:checked + .payment-item__cost {
   color: var(--text-color-2);
+}
+
+.card-holder,
+.card-details,
+.email {
+  margin-top: 30px;
+  display: block;
+  color: var(--text-color-2);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44;
 }
 
 /*# sourceMappingURL=main.css.map */
