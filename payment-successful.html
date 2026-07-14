@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign in | Grocery Mart</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Grocery" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- Script -->
+        <script src="./assets/js/script.js"></script>
+    </head>
+    <body>
+        <main class="main">
+            <article class="successful">
+                <div class="successful__top">
+                    <div class="successful__icon-bg">
+                        <img src="./assets/icon/successful.svg" alt="" class="successful__icon" />
+                    </div>
+                </div>
+                <h1 class="successful__notice">Payment Successful</h1>
+                <p class="successful__desc">Thank you for your payment. Your order is being processed.</p>
+                <div class="successful__separate"></div>
+                <div class="successful__row">
+                    <p class="successful__label">Amount Paid:</p>
+                    <span class="successful__value">$465.98</span>
+                </div>
+                <div class="successful__row">
+                    <p class="successful__label">Payment Method:</p>
+                    <span class="successful__value">Visa ending in 1234</span>
+                </div>
+                <div class="successful__row">
+                    <p class="successful__label">Date & Time:</p>
+                    <span class="successful__value">April 18, 2024 at 3:45 PM </span>
+                </div>
+                <a href="./index-logined.html" class="successful__btn btn btn--primary">Go to Homepage</a>
+            </article>
+        </main>
+        <script>
+            window.dispatchEvent(new Event("template-loaded"));
+        </script>
+    </body>
+</html>
