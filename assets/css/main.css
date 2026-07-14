@@ -4100,6 +4100,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px;
 }
 .cart-info__heading {
   color: var(--cart-info-heading-color);
@@ -4113,12 +4114,23 @@ html {
   font-weight: 500;
   line-height: 1.45;
 }
+@media (max-width: 767.98px) {
+  .cart-info__heading--lv2 {
+    font-size: 1.6rem;
+  }
+}
 .cart-info__sub-heading {
   color: var(--text-color);
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.44;
   margin: 30px 0;
+}
+@media (max-width: 767.98px) {
+  .cart-info__sub-heading {
+    font-size: 1.6rem !important;
+    margin: 20px 0;
+  }
 }
 .cart-info__edit-btn {
   display: flex;
@@ -4165,6 +4177,11 @@ html {
   margin-top: 0;
   margin-bottom: 30px;
 }
+@media (max-width: 767.98px) {
+  .cart-info__form {
+    margin-bottom: 20px;
+  }
+}
 
 .cart-item {
   display: flex;
@@ -4208,10 +4225,12 @@ html {
   flex: 1;
   display: flex;
   align-self: flex-start;
+  gap: 20px;
 }
 @media (max-width: 767.98px) {
   .cart-item__content {
     flex-direction: column;
+    align-items: flex-start;
   }
 }
 .cart-item__content-left {
@@ -4236,8 +4255,6 @@ html {
 @media (max-width: 767.98px) {
   .cart-item__title {
     font-size: 1.4rem;
-    font-weight: 500;
-    line-height: 1.43;
   }
 }
 .cart-item__title a {
@@ -4477,18 +4494,49 @@ html {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+@media (max-width: 767.98px) {
+  .payment-item {
+    align-items: flex-start;
+    padding: 16px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .payment-item--mobile {
+    align-items: center;
+  }
+}
+.payment-item {
   cursor: pointer;
 }
 .payment-item__content {
   flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 767.98px) {
+  .payment-item__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.payment-item__info {
+  flex: 1;
 }
 .payment-item__title {
   color: var(--text-color-2);
+  line-height: 1.44;
 }
 .payment-item__title, .payment-item__cost {
   font-size: 1.8rem;
   font-weight: 700;
-  line-height: 1.44;
+}
+@media (max-width: 767.98px) {
+  .payment-item__title, .payment-item__cost {
+    font-size: 1.6rem;
+  }
 }
 .payment-item__cost {
   color: #9e9da8;
@@ -4506,6 +4554,11 @@ html {
 .payment-item__desc--low, .payment-item__detail--low {
   font-size: 1.6rem;
   color: #9e9da8;
+}
+@media (max-width: 767.98px) {
+  .payment-item__desc--low, .payment-item__detail--low {
+    font-size: 1.4rem;
+  }
 }
 .payment-item__detail:hover {
   cursor: pointer;
