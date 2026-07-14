@@ -98,11 +98,11 @@
                                         <article class="address-card">
                                             <div class="address-card__left">
                                                 <div class="address-card__choose">
-                                                    <label class="address-card__checkbox">
+                                                    <label class="cart-info__checkbox">
                                                         <input
                                                             checked
                                                             type="checkbox"
-                                                            class="address-card__checkbox-input"
+                                                            class="cart-info__checkbox-input"
                                                         />
                                                     </label>
                                                 </div>
@@ -119,7 +119,7 @@
                                             </div>
                                             <div class="address-card__right">
                                                 <div class="address-card__ctrl">
-                                                    <button class="address-card__ctrl-btn">
+                                                    <button class="cart-info__edit-btn">
                                                         <img
                                                             src="./assets/icon/edit.svg"
                                                             alt=""
@@ -151,7 +151,7 @@
                                             </div>
                                             <div class="address-card__right">
                                                 <div class="address-card__ctrl">
-                                                    <button class="address-card__ctrl-btn">
+                                                    <button class="cart-info__edit-btn">
                                                         <img
                                                             src="./assets/icon/edit.svg"
                                                             alt=""
@@ -374,7 +374,7 @@
                                     <span class="cart-info__total">$201.65</span>
                                 </div>
 
-                                <a href="" class="cart-info__next-btn btn btn--primary btn--rounded"
+                                <a href="./payment.html" class="cart-info__next-btn btn btn--primary btn--rounded"
                                     >Continue to checkout</a
                                 >
                             </div>
@@ -410,9 +410,14 @@
             <div class="modal__content">
                 <div class="modal__text">Would you like to remove this item from your cart?</div>
                 <div class="modal__bottom">
-                    <button class="btn btn--text modal__btn js-toggle" toggle-target="#delete-confirm">Cancel</button>
-                    <button class="btn btn--primary btn--rounded modal__btn js-toggle" toggle-target="#delete-confirm">
-                        Confirm
+                    <button class="btn btn--outline modal__btn js-toggle" toggle-target="#delete-confirm">
+                        Cancel
+                    </button>
+                    <button
+                        class="modal__del-btn btn btn--primary modal__btn js-toggle"
+                        toggle-target="#delete-confirm"
+                    >
+                        Remove
                     </button>
                 </div>
             </div>
@@ -491,6 +496,7 @@
                                     class="form__input js-toggle"
                                     required
                                     toggle-target="#select-dialog"
+                                    readonly
                                 />
                                 <img src="./assets/icon/form-error.svg" alt="" class="form__input-error" />
 
