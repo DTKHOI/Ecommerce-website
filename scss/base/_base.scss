@@ -71,3 +71,9 @@ a {
         padding-right: 20px !important;
     }
 }
+
+.separate {
+    margin: var(--separate-margin) 0;
+    height: 1px;
+    background: var(--separate-bg);
+}
