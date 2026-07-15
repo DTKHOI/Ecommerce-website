@@ -1412,6 +1412,9 @@ html.dark {
   --gift-item-icon-wrap-shadow: none;
   --other-category-item-bg: #171c28;
   --other-category-item-shadow: rgba(0, 0, 0, 0.2);
+  --side-bar-bg: #171c28;
+  --side-bar-shadow: rgba(23, 28, 40, 0.2);
+  --profile-user-box-shadow: rgba(23, 28, 40, 0.2);
 }
 
 html {
@@ -1532,6 +1535,9 @@ html {
   --gift-item-icon-wrap-shadow: rgba(237, 237, 246, 0.2);
   --other-category-item-bg: #eee;
   --other-category-item-shadow: rgba(237, 237, 246, 0.2);
+  --side-bar-bg: white;
+  --side-bar-shadow: rgba(237, 237, 246, 0.2);
+  --profile-user-box-shadow: rgba(237, 237, 246, 0.2);
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -4689,6 +4695,79 @@ html {
 }
 .successful__btn {
   margin-top: 30px;
+}
+
+.profile-container {
+  margin: 30px 0;
+}
+.profile__side-bar {
+  padding-bottom: 30px;
+  border-radius: 20px;
+  background: var(--side-bar-bg);
+  box-shadow: 0 20px 60px 10px var(--side-bar-shadow);
+  overflow: hidden;
+}
+.profile-user {
+  color: white;
+  height: 246px;
+  padding: 40px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1a162e 100%), url(../../assets/img/background-cover.jpg) no-repeat center/cover;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 20px 60px 10px var(--profile-user-box-shadow);
+}
+.profile-user__avatar {
+  width: 121px;
+  height: 121px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background: #eee content-box;
+  box-shadow: 0 4px 14px 2px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+}
+.profile-user__name {
+  margin-top: 15px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.44;
+}
+.profile-user__desc {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.47;
+}
+.profile-menu {
+  color: var(--text-color-2);
+  margin-top: 30px;
+  padding: 0 30px;
+}
+.profile-menu__list {
+  margin-top: 11px;
+}
+.profile-menu__title {
+  margin-top: 30px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44;
+}
+.profile-menu__link {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+.profile-menu__link:hover {
+  color: white;
+  filter: var(--icon-color);
+}
+.profile-menu__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,93 @@
+.profile {
+    &-container {
+        margin: 30px 0;
+    }
+
+    &__side-bar {
+        padding-bottom: 30px;
+
+        border-radius: 20px;
+        background: var(--side-bar-bg);
+        box-shadow: 0 20px 60px 10px var(--side-bar-shadow);
+        overflow: hidden;
+    }
+
+    &-user {
+        color: white;
+        height: 246px;
+        padding: 40px 20px 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background:
+            linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1a162e 100%),
+            url(../../assets/img/background-cover.jpg) no-repeat center / cover;
+
+        border-radius: 20px 20px 0 0;
+        box-shadow: 0 20px 60px 10px var(--profile-user-box-shadow);
+
+        &__avatar {
+            width: 121px;
+            height: 121px;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+
+            background: #eee content-box;
+            box-shadow: 0 4px 14px 2px rgba(0, 0, 0, 0.08);
+            object-fit: cover;
+        }
+
+        &__name {
+            margin-top: 15px;
+
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.44;
+        }
+
+        &__desc {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.47;
+        }
+    }
+
+    &-menu {
+        color: var(--text-color-2);
+        margin-top: 30px;
+        padding: 0 30px;
+
+        &__list {
+            margin-top: 11px;
+        }
+
+        &__title {
+            margin-top: 30px;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 1.44;
+        }
+
+        &__link {
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 5px 0;
+
+            &:hover {
+                color: white;
+                filter: var(--icon-color);
+            }
+        }
+
+        &__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+    }
+}
