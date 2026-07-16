@@ -2792,6 +2792,9 @@ html {
     grid-template-columns: 1fr;
   }
 }
+.form__row--even {
+  grid-template-columns: 1fr 1fr;
+}
 .form__group {
   margin-top: 30px;
 }
@@ -4275,6 +4278,9 @@ html {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.42;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 .cart-info__heading--lv2 {
   color: var(--cart-info-heading-color);
@@ -4357,6 +4363,12 @@ html {
   .cart-info__checkout-all {
     width: 100%;
   }
+}
+.cart-info__back-arrow {
+  width: 44px;
+  padding: 10px 10px 10px 0;
+  position: relative;
+  top: 3px;
 }
 
 .cart-item {
@@ -4926,6 +4938,16 @@ html {
 }
 .profile__desc {
   margin-bottom: 16px;
+}
+
+.form-card__label {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--text-color-2);
+}
+.form-card__bottom {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /*# sourceMappingURL=main.css.map */

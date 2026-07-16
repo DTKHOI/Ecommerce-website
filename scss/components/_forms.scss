@@ -14,6 +14,10 @@
         @include abstracts.screen(md) {
             grid-template-columns: 1fr;
         }
+
+        &--even {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 
     &__group {
