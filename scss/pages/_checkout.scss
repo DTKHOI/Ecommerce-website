@@ -158,6 +158,10 @@
         align-items: center;
         gap: 20px;
 
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
+
         &--lv2 {
             color: var(--cart-info-heading-color);
             font-size: 2.2rem;
@@ -262,6 +266,11 @@
         padding: 10px 10px 10px 0;
         position: relative;
         top: 3px;
+
+        @include abstracts.screen(md) {
+            width: 30px;
+            padding: 5px 5px 5px 0;
+        }
     }
 }
 

@@ -1,12 +1,23 @@
+@use "../abstracts";
+
 .form-card {
     &__label {
         font-size: 1.8rem;
         margin-bottom: 20px;
         color: var(--text-color-2);
+
+        @include abstracts.screen(md) {
+            font-size: 1.5rem;
+        }
     }
 
     &__bottom {
         display: flex;
         justify-content: flex-end;
+
+        margin-top: 30px;
+        @include abstracts.screen(md) {
+            margin-top: 16px;
+        }
     }
 }
