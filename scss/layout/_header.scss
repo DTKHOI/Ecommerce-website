@@ -19,7 +19,7 @@
     @extend %flexItemsCenter;
     position: relative;
     z-index: 1;
-    padding: 30px 0;
+    padding: 20px 0;
 
     @include abstracts.screen(lg) {
         padding: 20px 0;
@@ -259,12 +259,26 @@
         background: var(--top-act-group-separate);
     }
 
+    &__user {
+        position: relative;
+
+        &:hover .top-act__dropdown {
+            display: block;
+        }
+    }
+
     &__avatar {
         display: block;
         width: 50px;
         height: 50px;
         border-radius: 8px;
         cursor: pointer;
+    }
+
+    &__dropdown {
+        right: 0 !important;
+        width: min(252px, 100vh) !important;
+        display: block;
     }
 }
 
@@ -422,5 +436,83 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 1.47;
+    }
+}
+
+.user-menu {
+    font-weight: 500;
+    color: var(--text-color-2);
+    position: relative;
+    border: 1px solid var(--user-menu-border-color);
+    border-radius: 20px;
+    background: var(--header-act-dropdown-bg);
+    box-shadow:
+        0 -1px 1.3px 0 rgba(0, 0, 0, 0.2) inset,
+        0 61px 17px 0 rgba(0, 0, 0, 0),
+        0 39px 16px 0 rgba(0, 0, 0, 0.01),
+        0 22px 13px 0 rgba(0, 0, 0, 0.02),
+        0 10px 10px 0 rgba(0, 0, 0, 0.04),
+        0 2px 5px 0 rgba(0, 0, 0, 0.04);
+
+    &__container {
+        padding: 8px;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+
+        padding: 12px 12px 12px 16px;
+        border: 1px solid var(--user-menu-border-color);
+        border-radius: 12px;
+        margin-bottom: 8px;
+    }
+
+    &__avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        box-shadow: 0 4px 14px 2px rgba(0, 0, 0, 0.08);
+        object-fit: cover;
+    }
+
+    &__name {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.5; /* 150% */
+    }
+
+    &__username {
+        color: #8a8a8a;
+        margin-top: 3px;
+        font-size: 1.4rem;
+        line-height: 1.14;
+        letter-spacing: -0.28px;
+    }
+
+    &__item {
+        border-radius: 12px;
+
+        &:hover {
+            background: #f2f2f2;
+        }
+    }
+
+    &__link {
+        padding: 8px;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        color: var(--text-color-2);
+        font-size: 1.4rem;
+        letter-spacing: -0.28px;
+    }
+
+    &__separate {
+        border-bottom: 1px solid var(--user-menu-border-color);
     }
 }

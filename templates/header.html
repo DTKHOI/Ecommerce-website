@@ -6,7 +6,7 @@
         </button>
 
         <!-- Logo -->
-        <a href="./" class="logo top-bar__logo">
+        <a href="./index.html" class="logo top-bar__logo">
             <img src="./assets/icon/logo.svg" alt="grocerymart" class="logo__img top-bar__logo-img" />
             <h1 class="logo__title top-bar__logo-title">grocerymart</h1>
         </a>
@@ -17,13 +17,13 @@
                 <img class="icon" src="./assets/icon/arrow-left.svg" alt="Back" />
             </button>
 
-            <a href="#!" class="nav-btn d-none d-md-flex">
+            <a href="./checkout.html" class="nav-btn d-none d-md-flex">
                 <img src="./assets/icon/cart.svg" alt="" class="icon nav-btn__icon" />
                 <span class="nav-btn__title">Cart</span>
                 <span class="nav-btn__quantity">3</span>
             </a>
 
-            <a href="#!" class="nav-btn d-none d-md-flex">
+            <a href="./favorite.html" class="nav-btn d-none d-md-flex">
                 <img src="./assets/icon/love.svg" alt="" class="icon nav-btn__icon" />
                 <span class="nav-btn__title">Favorite</span>
                 <span class="nav-btn__quantity">3</span>
@@ -4553,8 +4553,148 @@
 
         <!-- Actions -->
         <div class="top-act">
-            <a href="./sign-in.html" class="btn btn--text d-none">Sign In</a>
-            <a href="./sign-up.html" class="top-act__sign-up btn btn--primary">Sign Up</a>
+            <div class="top-act__group d-md-none">
+                <button class="top-act__btn">
+                    <img src="./assets/icon/search.svg" alt="" class="icon top-act__icon" />
+                </button>
+            </div>
+
+            <div class="top-act__group d-md-none">
+                <div class="top-act__btn-wrap">
+                    <a href="./sign-up.html" class="top-act__btn">
+                        <img src="./assets/icon/love.svg" alt="" class="icon top-act__icon" />
+                    </a>
+                </div>
+
+                <div class="top-act__separate"></div>
+
+                <div class="top-act__btn-wrap">
+                    <a href="./sign-up.html" class="top-act__btn">
+                        <img src="./assets/icon/cart.svg" alt="" class="icon top-act__icon" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="top-act__group">
+                <button class="top-act__user">
+                    <div class="top-act__btn">
+                        <img src="../assets/icon/user-dropdown-icon/user.svg" alt="" class="icon top-act__icon" />
+                    </div>
+
+                    <!-- Dropdown -->
+                    <div class="act-dropdown top-act__dropdown">
+                        <div class="user-menu">
+                            <div class="user-menu__container">
+                                <div class="user-menu__top">
+                                    <div class="user-menu__info">
+                                        <p class="user-menu__name">User</p>
+                                        <p class="user-menu__username">@user</p>
+                                    </div>
+                                    <img
+                                        src="../assets/icon/user-dropdown-icon/user.svg"
+                                        alt=""
+                                        class="user-menu__avatar icon-2"
+                                    />
+                                </div>
+
+                                <ul class="user-menu__list">
+                                    <li class="user-menu__item">
+                                        <a href="./sign-up.html" class="user-menu__link">
+                                            <img
+                                                src="../assets/icon/user-dropdown-icon/profile.svg"
+                                                alt=""
+                                                class="user-menu__icon icon-2"
+                                            />
+                                            <span>Profile</span>
+                                        </a>
+                                    </li>
+                                    <li class="user-menu__item">
+                                        <a href="./sign-up.html" class="user-menu__link">
+                                            <img
+                                                src="../assets/icon/user-dropdown-icon/favorite.svg"
+                                                alt=""
+                                                class="user-menu__icon icon-2"
+                                            />
+                                            <span>Favorite</span>
+                                        </a>
+                                    </li>
+                                    <li class="user-menu__item">
+                                        <a href="#!" class="user-menu__link">
+                                            <img
+                                                src="../assets/icon/user-dropdown-icon/setting.svg"
+                                                alt=""
+                                                class="user-menu__icon icon-2"
+                                            />
+                                            <span>Settings</span>
+                                        </a>
+                                    </li>
+                                    <li class="user-menu__item" id="switch-theme-btn">
+                                        <a href="#!" class="user-menu__link">
+                                            <img
+                                                src="../assets/icon/user-dropdown-icon/dark-mode.svg"
+                                                alt=""
+                                                class="user-menu__icon icon-2"
+                                            />
+                                            <span>Dark mode</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="user-menu__separate"></div>
+                            <div class="user-menu__container">
+                                <ul class="user-menu__list">
+                                    <li class="user-menu__item">
+                                        <a href="#!" class="user-menu__link">
+                                            <img
+                                                src="../assets/icon/user-dropdown-icon/help.svg"
+                                                alt=""
+                                                class="user-menu__icon icon-2"
+                                            />
+                                            <span>Help</span>
+                                        </a>
+                                    </li>
+                                    <li class="user-menu__item">
+                                        <a href="#!" class="user-menu__link">
+                                            <img
+                                                src="../assets/icon/user-dropdown-icon/support.svg"
+                                                alt=""
+                                                class="user-menu__icon icon-2"
+                                            />
+                                            <span>Support</span>
+                                        </a>
+                                    </li>
+                                    <li class="user-menu__item">
+                                        <a href="#!" class="user-menu__link">
+                                            <img
+                                                src="../assets/icon/user-dropdown-icon/community.svg"
+                                                alt=""
+                                                class="user-menu__icon icon-2"
+                                            />
+                                            <span>Community</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="user-menu__separate"></div>
+                            <div class="user-menu__container">
+                                <ul class="user-menu__list">
+                                    <li class="user-menu__item">
+                                        <a href="./sign-in.html" class="user-menu__link">
+                                            <img
+                                                src="../assets/icon/user-dropdown-icon/login.svg"
+                                                alt=""
+                                                class="user-menu__icon icon-2"
+                                            />
+                                            <span>Sign in</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+            </div>
         </div>
     </div>
 </div>

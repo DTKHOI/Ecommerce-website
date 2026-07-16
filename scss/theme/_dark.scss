@@ -31,6 +31,8 @@ html.dark {
     --menu-column-icon-color: brightness(0) saturate(100%) invert(94%) sepia(85%) saturate(232%) hue-rotate(234deg)
         brightness(107%) contrast(96%);
 
+    --user-menu-border-color: var(--text-color-2);
+
     // Sidebar
     --sidebar-bg: #292e39;
     --sidebar-shadow: rgba(23, 28, 40, 0.4);

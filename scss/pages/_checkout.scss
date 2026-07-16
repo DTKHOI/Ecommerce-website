@@ -345,10 +345,6 @@
         @include abstracts.screen(md) {
             font-size: 1.4rem;
         }
-
-        a {
-            color: inherit;
-        }
     }
 
     &__price-wrap {
