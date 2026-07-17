@@ -137,8 +137,7 @@ table {
 ::before,
 ::after {
   box-sizing: border-box;
-  transition-property: background, color, filter, box-shadow;
-  transition-duration: 0.2s;
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
 * {
@@ -3037,6 +3036,7 @@ html {
   -webkit-user-select: none;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .form__checkbox-label {
   margin-left: 29px;
@@ -3410,6 +3410,9 @@ html {
 .modal--small .modal__content {
   width: min(400px, 100% - 40px);
 }
+.modal--medium .modal__content {
+  width: min(800px, 100% - 40px);
+}
 .modal--large .modal__content {
   width: min(1100px, 100% - 40px);
 }
@@ -3491,6 +3494,116 @@ html {
 }
 .modal__del-btn {
   background: orangered;
+}
+.modal__top {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #dadce0;
+}
+.modal__label {
+  color: var(--text-color-2);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.43;
+}
+.modal__logo {
+  position: relative;
+  bottom: 1px;
+}
+.modal__main-content {
+  margin: 30px 0;
+}
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal__title {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.33;
+}
+.modal__title--small {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.modal__title--highlight {
+  color: #1a73e8;
+  font-weight: 500;
+}
+.modal__account-list {
+  margin-top: 24px;
+  padding: 0 40px;
+}
+.modal__account-opt {
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #dadce0;
+}
+.modal__account-name {
+  color: var(--text-color-2);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.43;
+}
+.modal__account-email {
+  color: #5f6368;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.33;
+}
+.modal__account-bg {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal__account-avt {
+  width: 100%;
+  object-fit: cover;
+}
+.modal__desc {
+  padding: 9px 40px 0 40px;
+  color: #5f6368;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.43;
+}
+.modal__link {
+  color: #1a73e8;
+  font-weight: 500;
+}
+.modal__footer {
+  margin-top: 16px;
+}
+.modal__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: balance;
+}
+.modal__item {
+  padding: 8px 16px;
+  color: #5f6368;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.modal__language-opt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
 }
 
 .other-category__heading {
@@ -3930,6 +4043,24 @@ html {
 }
 .auth__text-link {
   font-size: inherit;
+}
+.auth__google-account {
+  flex-direction: column;
+}
+.auth__account-choice-box {
+  padding-bottom: 36px;
+  border-radius: 8px;
+  border: 1px solid #dadce0;
+}
+
+.google-login {
+  width: min(500px, 100%);
+  background: var(--body-bg);
+  padding: 8px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+  font-family: Roboto, system-ui;
 }
 
 .product-page {

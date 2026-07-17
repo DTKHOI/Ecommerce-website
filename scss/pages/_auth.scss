@@ -174,4 +174,24 @@
             font-size: inherit;
         }
     }
+
+    &__google-account {
+        flex-direction: column;
+    }
+
+    &__account-choice-box {
+        padding-bottom: 36px;
+        border-radius: 8px;
+        border: 1px solid #dadce0;
+    }
+}
+
+.google-login {
+    width: min(500px, 100%);
+    background: var(--body-bg);
+    padding: 8px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    font-family: Roboto, system-ui;
 }

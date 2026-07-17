@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sign in | Grocery Mart</title>
+        <title>Login | Grocery Mart</title>
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
@@ -40,7 +40,7 @@
 
                     <h1 class="auth__heading">Hello Again!</h1>
                     <p class="auth__description">
-                        Welcome back to sign in. As a returning customer, you have access to your previously saved all
+                        Welcome back to Login. As a returning customer, you have access to your previously saved all
                         information.
                     </p>
                     <form action="./index-logined.html" class="form auth__form">
@@ -77,15 +77,111 @@
                             <a href="./reset-password.html" class="auth__link form__pull-right">Forgot Password?</a>
                         </div>
                         <div class="form__group auth__btn-group">
-                            <button class="btn auth__btn btn--primary form__submit-btn">Sign In</button>
-                            <button class="btn btn--no-margin auth__btn btn--outline">
+                            <button class="btn auth__btn btn--primary form__submit-btn">Login</button>
+                            <button
+                                class="btn btn--no-margin auth__btn btn--outline js-toggle"
+                                toggle-target="#login-google"
+                            >
                                 <img
                                     src="./assets/img/auth/auth-google.svg"
                                     alt=""
                                     class="btn__icon btn--no-margin icon"
                                 />
-                                Sign in with Google
+                                Login with Google
                             </button>
+                        </div>
+
+                        <div id="login-google" class="modal modal--small hide">
+                            <article class="google-login">
+                                <div class="auth__account-choice-box">
+                                    <div class="modal__top">
+                                        <img src="./assets/icon/google-colored.svg" alt="Google" class="modal__logo" />
+                                        <span class="modal__label">Sign in with Google</span>
+                                    </div>
+                                    <div class="modal__main-content">
+                                        <div class="modal__header">
+                                            <div class="modal__avt-wrap">
+                                                <img
+                                                    src="./assets/icon/logo.svg"
+                                                    alt="grocerymart"
+                                                    class="modal__brand"
+                                                />
+                                            </div>
+                                            <p class="modal__title">
+                                                Choose an account
+                                                <span class="modal__title modal__title--small">
+                                                    <br />
+                                                    to continue to
+                                                    <span class="modal__title--highlight">Company</span></span
+                                                >
+                                            </p>
+                                        </div>
+                                        <ul class="modal__account-list">
+                                            <li>
+                                                <a href="./index-logined.html" class="modal__account-opt"
+                                                    ><div class="modal__account-bg">
+                                                        <img
+                                                            src="./assets/img/avatar.jpg"
+                                                            alt="Account Name"
+                                                            class="modal__account-avt"
+                                                        />
+                                                    </div>
+                                                    <div class="modal__account-info">
+                                                        <p class="modal__account-name">Imran Khan</p>
+                                                        <p class="modal__account-email">imrankhan285@gmail.com</p>
+                                                    </div></a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="modal__account-opt">
+                                                    <div class="modal__account-bg">
+                                                        <img
+                                                            src="./assets/icon/account-icon.svg"
+                                                            alt=""
+                                                            class="modal__account-avt"
+                                                        />
+                                                    </div>
+                                                    <div class="modal__account-info">
+                                                        <p class="modal__account-name">Use another account</p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="modal__desc">
+                                        To continue, Google will share your name, email address, language preference,
+                                        and profile picture with Company. Before using this app, you can review
+                                        Company's
+                                        <a class="modal__link" href="#!">privacy policy</a>
+                                        and <a class="modal__link" href="#!">terms of service.</a>
+                                    </p>
+                                </div>
+
+                                <div class="modal__footer">
+                                    <ul class="modal__list">
+                                        <li class="modal__item modal__language-opt">
+                                            <button>
+                                                <span>English (United States)</span>
+                                                <img
+                                                    src="./assets/icon/auth-dropdown.svg"
+                                                    alt=""
+                                                    class="modal__dropdown-icon icon-2"
+                                                />
+                                            </button>
+                                        </li>
+                                        <li class="modal__item">
+                                            <a href="#!">Help</a>
+                                        </li>
+                                        <li class="modal__item">
+                                            <a href="#!">Privacy</a>
+                                        </li>
+                                        <li class="modal__item">
+                                            <a href="#!">Terms</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <div class="modal__overlay js-toggle" toggle-target="#login-google"></div>
                         </div>
                     </form>
 
